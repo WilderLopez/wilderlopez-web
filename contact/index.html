@@ -49,13 +49,16 @@
 
             <div class="contact-content">
                 <div class="contact-methods">
-                    <a href="mailto:hello@wilderlopezelias.com" class="contact-item">
+                    <div class="contact-item contact-item-email">
                         <div class="contact-icon">✉️</div>
                         <div class="contact-info">
                             <h3>Email</h3>
-                            <p>hello@wilderlopezelias.com</p>
+                            <p class="email-text" id="email-text">hello@wilderlopezelias.com</p>
                         </div>
-                    </a>
+                        <button class="copy-btn" onclick="copyEmail()" title="Copy email">
+                            <span id="copy-icon">📋</span>
+                        </button>
+                    </div>
 
                     <a href="https://www.linkedin.com/in/wilderlopezelias/" target="_blank" rel="noopener noreferrer" class="contact-item">
                         <div class="contact-icon">💼</div>
@@ -82,9 +85,6 @@
                     </a>
                 </div>
 
-                <div class="text-center mt-lg">
-                    <p class="text-muted">Based in LATAM</p>
-                </div>
             </div>
         </div>
     </main>
@@ -109,6 +109,15 @@
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => navLinks.classList.remove('open'));
         });
+
+        function copyEmail() {
+            const email = document.getElementById('email-text').textContent;
+            navigator.clipboard.writeText(email).then(() => {
+                const icon = document.getElementById('copy-icon');
+                icon.textContent = '✓';
+                setTimeout(() => { icon.textContent = '📋'; }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
