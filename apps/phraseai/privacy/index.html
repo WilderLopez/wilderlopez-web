@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for PhraseAI - Learn how we protect your data and privacy.">
+
+    <title>Privacy Policy - PhraseAI</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopez.com/apps/phraseai/privacy/">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav-logo">Wilder Lopez</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/contact/" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><a href="/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><a href="/apps/phraseai/" class="breadcrumbs-link">PhraseAI</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Privacy</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">PhraseAI</p>
+            </header>
+
+            <div class="legal-content">
+                <p class="last-updated">Last updated: January 2025</p>
+
+                <h2>Introduction</h2>
+                <p>
+                    This Privacy Policy describes how PhraseAI ("we", "our", or "us") handles
+                    information when you use our application.
+                </p>
+
+                <h2>Data Collection</h2>
+                <p>
+                    Details about data collection practices will be provided when the app launches.
+                </p>
+
+                <h2>Contact Us</h2>
+                <p>
+                    For questions about this Privacy Policy, visit our
+                    <a href="/contact/">contact page</a>.
+                </p>
+
+                <div class="mt-lg">
+                    <a href="/apps/phraseai/">&larr; Back to PhraseAI</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/about/">About</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ClipCard Pro - Smart clipboard management with organization and quick access to your most used snippets.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClipCard Pro - Clipboard Manager">
+    <meta property="og:description" content="Smart clipboard management with organization and quick access.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopez.com/apps/clipcard-pro/">
+
+    <title>ClipCard Pro - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopez.com/apps/clipcard-pro/">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav-logo">Wilder Lopez</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/contact/" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><a href="/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">ClipCard Pro</span></li>
+                </ol>
+            </nav>
+
+            <div class="app-detail">
+                <div class="app-detail-header">
+                    <div class="app-detail-icon">📋</div>
+                    <div class="app-detail-info">
+                        <h1>ClipCard Pro</h1>
+                        <p class="tagline">Smart clipboard management</p>
+                        <div class="app-links">
+                            <span class="btn btn-secondary" style="cursor: default;">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-description">
+                    <p>
+                        ClipCard Pro simplifies your clipboard management with smart organization and
+                        quick access to your most used snippets. Stop losing important text you've
+                        copied—ClipCard Pro keeps everything organized and accessible.
+                    </p>
+                    <p>
+                        Whether you're a developer managing code snippets, a writer collecting
+                        notes, or anyone who copies and pastes frequently, ClipCard Pro helps you
+                        work more efficiently.
+                    </p>
+                    <p>
+                        <strong>Currently in development.</strong> Stay tuned for updates.
+                    </p>
+                </div>
+
+                <h2 class="mb-md">Preview</h2>
+                <div class="app-screenshots">
+                    <div class="screenshot-placeholder"></div>
+                    <div class="screenshot-placeholder"></div>
+                    <div class="screenshot-placeholder"></div>
+                </div>
+
+                <div class="app-subpages">
+                    <a href="/apps/clipcard-pro/privacy/">Privacy Policy</a>
+                    <a href="/apps/clipcard-pro/terms/">Terms & Conditions</a>
+                    <a href="/apps/clipcard-pro/support/">Support</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/about/">About</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

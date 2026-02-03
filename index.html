@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wilder Lopez - iOS Developer & App Creator with 6+ years of experience building innovative mobile applications.">
+    <meta name="keywords" content="iOS Developer, Swift, Mobile Apps, App Development, Wilder Lopez">
+    <meta name="author" content="Wilder Lopez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wilder Lopez - iOS Developer & App Creator">
+    <meta property="og:description" content="iOS Developer with 6+ years of experience creating innovative mobile applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopez.com">
+    <meta property="og:image" content="https://wilderlopez.com/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wilder Lopez - iOS Developer & App Creator">
+    <meta name="twitter:description" content="iOS Developer with 6+ years of experience creating innovative mobile applications.">
+
+    <title>Wilder Lopez - iOS Developer & App Creator</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopez.com">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav-logo">Wilder Lopez</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/about/" class="nav-link">About</a></li>
+                <li><a href="/apps/" class="nav-link">Apps</a></li>
+                <li><a href="/contact/" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Wilder Lopez</h1>
+                <p class="hero-tagline">iOS Developer & App Creator</p>
+                <p class="hero-description">
+                    Building innovative mobile experiences for over 6 years.
+                    I transform ideas into polished iOS applications that users love,
+                    focusing on clean architecture, performance, and exceptional user experience.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/apps/" class="btn btn-primary">View My Apps</a>
+                    <a href="/contact/" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-cards">
+                <a href="/about/" class="card">
+                    <div class="card-icon">👨‍💻</div>
+                    <h2 class="card-title">About Me</h2>
+                    <p class="card-description">
+                        Learn about my journey, skills, and approach to iOS development.
+                    </p>
+                </a>
+                <a href="/apps/" class="card">
+                    <div class="card-icon">📱</div>
+                    <h2 class="card-title">My Apps</h2>
+                    <p class="card-description">
+                        Explore the applications I've built and shipped to the App Store.
+                    </p>
+                </a>
+                <a href="/contact/" class="card">
+                    <div class="card-icon">✉️</div>
+                    <h2 class="card-title">Contact</h2>
+                    <p class="card-description">
+                        Let's connect. Reach out for collaborations or opportunities.
+                    </p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/about/">About</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
