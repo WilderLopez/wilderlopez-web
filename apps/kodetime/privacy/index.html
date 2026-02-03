@@ -44,23 +44,119 @@
             </header>
 
             <div class="legal-content">
-                <p class="last-updated">Last updated: January 2025</p>
+                <p class="last-updated">Last updated: February 2026</p>
 
                 <h2>Introduction</h2>
                 <p>
-                    This Privacy Policy describes how Kodetime ("we", "our", or "us") handles
-                    information when you use our macOS application.
+                    This Privacy Policy describes how Kodetime ("we", "our", or "us") collects, uses,
+                    and protects your information when you use our AI-powered task estimation application for macOS.
                 </p>
 
-                <h2>Data Collection</h2>
+                <h2>Data Storage</h2>
                 <p>
-                    Details about data collection practices will be provided when the app launches.
+                    Kodetime is designed with privacy as a priority. Your data is stored:
+                </p>
+                <ul>
+                    <li><strong>Locally on your Mac</strong> using SwiftData (Apple's secure database)</li>
+                    <li><strong>API keys in Keychain</strong> using macOS secure storage</li>
+                </ul>
+                <p>We do not operate servers that store your project data or tickets.</p>
+
+                <h2>Information We Collect</h2>
+
+                <h3>What We DO NOT Collect</h3>
+                <ul>
+                    <li>Your source code</li>
+                    <li>Your project files</li>
+                    <li>Your API keys (stored only in your local Keychain)</li>
+                    <li>Your GitHub/GitLab credentials</li>
+                </ul>
+
+                <h3>What We MAY Collect (Optional)</h3>
+                <ul>
+                    <li>Anonymized crash reports</li>
+                    <li>Basic usage analytics (feature usage, not content)</li>
+                </ul>
+
+                <h2>Third-Party Services</h2>
+
+                <h3>Anthropic (Claude AI)</h3>
+                <p>
+                    When you request a task estimation, Kodetime sends the following to Anthropic's API:
+                </p>
+                <ul>
+                    <li>Ticket title and description</li>
+                    <li>Project technology stack (auto-detected)</li>
+                    <li>No source code is sent unless explicitly included in ticket description</li>
+                </ul>
+                <p>
+                    Your Anthropic API key is stored locally in your macOS Keychain and sent directly
+                    to Anthropic. We never see or store your API key.
+                </p>
+                <p>
+                    Please review <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a>.
+                </p>
+
+                <h3>GitHub / GitLab</h3>
+                <p>
+                    If you connect your GitHub or GitLab account:
+                </p>
+                <ul>
+                    <li>OAuth tokens are stored in your local Keychain</li>
+                    <li>We access only the repositories you authorize</li>
+                    <li>Issue data is imported to your local database</li>
+                    <li>We do not store your credentials on any server</li>
+                </ul>
+                <p>
+                    Review <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Policy</a>
+                    and <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">GitLab's Privacy Policy</a>.
+                </p>
+
+                <h2>Project Analysis</h2>
+                <p>
+                    When you add a project, Kodetime analyzes the folder to detect:
+                </p>
+                <ul>
+                    <li>Technology stack (languages, frameworks)</li>
+                    <li>Project structure</li>
+                </ul>
+                <p>
+                    This analysis is performed entirely on your Mac. No project files are uploaded or transmitted.
+                </p>
+
+                <h2>Data Security</h2>
+                <ul>
+                    <li>All data stored locally using macOS security features</li>
+                    <li>API keys and OAuth tokens stored in Keychain (encrypted)</li>
+                    <li>No cloud storage or synchronization</li>
+                    <li>Data remains on your Mac</li>
+                </ul>
+
+                <h2>Your Rights</h2>
+                <p>You have full control over your data:</p>
+                <ul>
+                    <li>Delete projects and tickets at any time</li>
+                    <li>Disconnect GitHub/GitLab accounts</li>
+                    <li>Remove API keys from Keychain</li>
+                    <li>Uninstall the app to remove all data</li>
+                </ul>
+
+                <h2>Children's Privacy</h2>
+                <p>
+                    Kodetime is designed for professional software developers. It is not intended for
+                    children under 13.
+                </p>
+
+                <h2>Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. We will notify you of any
+                    changes by updating the "Last updated" date.
                 </p>
 
                 <h2>Contact Us</h2>
                 <p>
-                    For questions about this Privacy Policy, visit our
-                    <a href="/contact/">contact page</a>.
+                    For questions about this Privacy Policy, contact us at:
+                    <a href="mailto:info@wilderlopezelias.com">info@wilderlopezelias.com</a>
                 </p>
 
                 <div class="mt-lg">
