@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Wilder Lopez - iOS Developer with 6+ years of experience in Swift, app architecture, and creating polished mobile experiences.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About - Wilder Lopez">
+    <meta property="og:description" content="iOS Developer with 6+ years of experience in Swift, app architecture, and creating polished mobile experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopezelias.com/en/about/">
+
+    <title>About - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/en/about/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/about/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/about/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/en/" class="nav-logo">Wilder Lopez Elias</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about/" class="nav-link active">About</a></li>
+                <li><a href="/en/apps/" class="nav-link">Apps</a></li>
+                <li><a href="/en/contact/" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="/es/about/" class="lang-switch" title="Cambiar a Español">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/en/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">About</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">About Me</h1>
+                <p class="page-subtitle">iOS Developer, Entrepreneur & App Creator</p>
+            </header>
+
+            <div class="about-content">
+                <section class="about-section">
+                    <h2>My Story</h2>
+                    <p>
+                        I'm an iOS developer with over 6 years of experience crafting mobile applications
+                        that make a difference. My journey in tech started with a fascination for how
+                        software can solve real problems and improve people's daily lives.
+                    </p>
+                    <p>
+                        Throughout my career, I've worked on diverse projects ranging from consumer apps
+                        to enterprise solutions, always with a focus on code quality, user experience,
+                        and scalable architecture. I believe great apps are built through attention to
+                        detail and a deep understanding of user needs.
+                    </p>
+                    <p>
+                        As an entrepreneur, I've channeled my skills into building my own products,
+                        giving me a unique perspective on the full lifecycle of app development—from
+                        initial concept to App Store launch and beyond.
+                    </p>
+                </section>
+
+                <section class="about-section">
+                    <h2>Skills & Expertise</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">Swift & SwiftUI</div>
+                        <div class="skill-item">UIKit</div>
+                        <div class="skill-item">iOS Architecture (MVVM, Clean)</div>
+                        <div class="skill-item">Core Data & Realm</div>
+                        <div class="skill-item">REST APIs & Networking</div>
+                        <div class="skill-item">CI/CD (Fastlane, GitHub Actions)</div>
+                        <div class="skill-item">Unit & UI Testing</div>
+                        <div class="skill-item">App Store Optimization</div>
+                        <div class="skill-item">Git & Version Control</div>
+                        <div class="skill-item">Firebase & Analytics</div>
+                        <div class="skill-item">Push Notifications</div>
+                        <div class="skill-item">In-App Purchases</div>
+                    </div>
+                </section>
+
+                <section class="about-section">
+                    <h2>My Approach</h2>
+                    <p>
+                        I believe in writing clean, maintainable code that stands the test of time.
+                        Every project I take on receives the same level of dedication—whether it's
+                        a personal side project or a large-scale enterprise application.
+                    </p>
+                    <p>
+                        I stay current with Apple's latest technologies and best practices, always
+                        looking for ways to deliver better experiences while maintaining backward
+                        compatibility when needed.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/en/about/">About</a>
+                    <a href="/en/apps/">Apps</a>
+                    <a href="/en/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

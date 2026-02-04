@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de Kodetime - Conoce cómo protegemos tus datos y privacidad.">
+
+    <title>Política de Privacidad - Kodetime</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/es/apps/kodetime/privacy/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/kodetime/privacy/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/kodetime/privacy/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/es/" class="nav-logo">Wilder Lopez</a>
+            <button class="nav-toggle" aria-label="Alternar navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/es/" class="nav-link">Inicio</a></li>
+                <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
+                <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/es/contact/" class="nav-link">Contacto</a></li>
+                <li class="nav-lang"><a href="/en/apps/kodetime/privacy/" class="lang-switch" title="Switch to English">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Migas de pan">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/es/" class="breadcrumbs-link">Inicio</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/kodetime/" class="breadcrumbs-link">Kodetime</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Privacidad</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Política de Privacidad</h1>
+                <p class="page-subtitle">Kodetime</p>
+            </header>
+
+            <div class="legal-content">
+                <p class="last-updated">Última actualización: Febrero 2026</p>
+
+                <h2>Introducción</h2>
+                <p>
+                    Esta Política de Privacidad describe cómo Kodetime ("nosotros", "nuestro" o "nos") recopila, usa
+                    y protege tu información cuando usas nuestra aplicación de estimación de tareas con IA para macOS.
+                </p>
+
+                <h2>Almacenamiento de Datos</h2>
+                <p>
+                    Kodetime está diseñado con la privacidad como prioridad. Tus datos se almacenan:
+                </p>
+                <ul>
+                    <li><strong>Localmente en tu Mac</strong> usando SwiftData (base de datos segura de Apple)</li>
+                    <li><strong>Claves API en Keychain</strong> usando almacenamiento seguro de macOS</li>
+                </ul>
+                <p>No operamos servidores que almacenen tus datos de proyecto o tickets.</p>
+
+                <h2>Información que Recopilamos</h2>
+
+                <h3>Lo que NO Recopilamos</h3>
+                <ul>
+                    <li>Tu código fuente</li>
+                    <li>Tus archivos de proyecto</li>
+                    <li>Tus claves API (almacenadas solo en tu Keychain local)</li>
+                    <li>Tus credenciales de GitHub/GitLab</li>
+                </ul>
+
+                <h3>Lo que PODEMOS Recopilar (Opcional)</h3>
+                <ul>
+                    <li>Reportes de errores anonimizados</li>
+                    <li>Análisis básicos de uso (uso de funciones, no contenido)</li>
+                </ul>
+
+                <h2>Servicios de Terceros</h2>
+
+                <h3>Anthropic (Claude AI)</h3>
+                <p>
+                    Cuando solicitas una estimación de tarea, Kodetime envía lo siguiente a la API de Anthropic:
+                </p>
+                <ul>
+                    <li>Título y descripción del ticket</li>
+                    <li>Stack tecnológico del proyecto (detectado automáticamente)</li>
+                    <li>No se envía código fuente a menos que esté explícitamente incluido en la descripción del ticket</li>
+                </ul>
+                <p>
+                    Tu clave API de Anthropic se almacena localmente en tu Keychain de macOS y se envía directamente
+                    a Anthropic. Nunca vemos ni almacenamos tu clave API.
+                </p>
+                <p>
+                    Por favor revisa la <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Anthropic</a>.
+                </p>
+
+                <h3>GitHub / GitLab</h3>
+                <p>
+                    Si conectas tu cuenta de GitHub o GitLab:
+                </p>
+                <ul>
+                    <li>Los tokens OAuth se almacenan en tu Keychain local</li>
+                    <li>Solo accedemos a los repositorios que autorices</li>
+                    <li>Los datos de issues se importan a tu base de datos local</li>
+                    <li>No almacenamos tus credenciales en ningún servidor</li>
+                </ul>
+                <p>
+                    Revisa la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Política de Privacidad de GitHub</a>
+                    y la <a href="https://about.gitlab.com/privacy/" target="_blank" rel="noopener">Política de Privacidad de GitLab</a>.
+                </p>
+
+                <h2>Análisis de Proyectos</h2>
+                <p>
+                    Cuando agregas un proyecto, Kodetime analiza la carpeta para detectar:
+                </p>
+                <ul>
+                    <li>Stack tecnológico (lenguajes, frameworks)</li>
+                    <li>Estructura del proyecto</li>
+                </ul>
+                <p>
+                    Este análisis se realiza completamente en tu Mac. No se suben ni transmiten archivos del proyecto.
+                </p>
+
+                <h2>Seguridad de Datos</h2>
+                <ul>
+                    <li>Todos los datos almacenados localmente usando características de seguridad de macOS</li>
+                    <li>Claves API y tokens OAuth almacenados en Keychain (encriptado)</li>
+                    <li>Sin almacenamiento en la nube ni sincronización</li>
+                    <li>Los datos permanecen en tu Mac</li>
+                </ul>
+
+                <h2>Tus Derechos</h2>
+                <p>Tienes control total sobre tus datos:</p>
+                <ul>
+                    <li>Eliminar proyectos y tickets en cualquier momento</li>
+                    <li>Desconectar cuentas de GitHub/GitLab</li>
+                    <li>Remover claves API del Keychain</li>
+                    <li>Desinstalar la app para eliminar todos los datos</li>
+                </ul>
+
+                <h2>Privacidad de Menores</h2>
+                <p>
+                    Kodetime está diseñado para desarrolladores de software profesionales. No está destinado para
+                    menores de 13 años.
+                </p>
+
+                <h2>Cambios a Esta Política</h2>
+                <p>
+                    Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cualquier
+                    cambio actualizando la fecha de "Última actualización".
+                </p>
+
+                <h2>Contáctanos</h2>
+                <p>
+                    Para preguntas sobre esta Política de Privacidad, contáctanos en:
+                    <a href="mailto:info@wilderlopezelias.com">info@wilderlopezelias.com</a>
+                </p>
+
+                <div class="mt-lg">
+                    <a href="/es/apps/kodetime/">&larr; Volver a Kodetime</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="/es/about/">Sobre Mí</a>
+                    <a href="/es/apps/">Apps</a>
+                    <a href="/es/contact/">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

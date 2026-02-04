@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kodetime - Estimación de tareas con IA para macOS. Analiza proyectos con Claude AI y obtén estimaciones precisas de tiempo para tareas de desarrollo.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kodetime - Estimación de Tareas con IA para macOS">
+    <meta property="og:description" content="Tu compañero de estimación con IA. Obtén estimaciones precisas de tiempo para tareas de desarrollo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopezelias.com/es/apps/kodetime/">
+
+    <title>Kodetime - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/es/apps/kodetime/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/kodetime/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/kodetime/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/es/" class="nav-logo">Wilder Lopez</a>
+            <button class="nav-toggle" aria-label="Alternar navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/es/" class="nav-link">Inicio</a></li>
+                <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
+                <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/es/contact/" class="nav-link">Contacto</a></li>
+                <li class="nav-lang"><a href="/en/apps/kodetime/" class="lang-switch" title="Switch to English">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Migas de pan">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/es/" class="breadcrumbs-link">Inicio</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Kodetime</span></li>
+                </ol>
+            </nav>
+
+            <div class="app-detail">
+                <div class="app-detail-header">
+                    <img src="/assets/icons/kodetime.png" alt="Kodetime" class="app-detail-icon-img">
+                    <div class="app-detail-info">
+                        <h1>Kodetime</h1>
+                        <p class="tagline">Tu compañero de estimación con IA</p>
+                        <span class="platform-badge">macOS 14+</span>
+                        <div class="app-links">
+                            <span class="btn btn-secondary" style="cursor: default;">Próximamente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-description">
+                    <p>
+                        Kodetime es una aplicación nativa de macOS que usa Claude AI para analizar proyectos de software
+                        y proporcionar estimaciones precisas de tiempo para tareas de desarrollo. Deja de adivinar, empieza a estimar.
+                    </p>
+                </div>
+
+                <h2 class="mb-md">Características</h2>
+                <ul class="feature-list">
+                    <li><strong>Estimaciones con IA</strong> - Claude AI analiza tareas basándose en el contexto de tu proyecto</li>
+                    <li><strong>Gestión de Proyectos</strong> - Gestiona múltiples proyectos de software con detección automática de stack tecnológico</li>
+                    <li><strong>Integración GitHub/GitLab</strong> - Importa issues directamente vía OAuth</li>
+                    <li><strong>Desglose Detallado</strong> - Subtareas, factores de complejidad y niveles de confianza</li>
+                    <li><strong>Gestión de Tickets</strong> - Crea, organiza y rastrea tickets con 6 tipos y estados</li>
+                    <li><strong>Historial de Estimaciones</strong> - Rastrea la precisión con tiempo estimado vs real</li>
+                    <li><strong>macOS Nativo</strong> - Construido con SwiftUI para una experiencia Mac perfecta</li>
+                </ul>
+
+                <p class="mt-lg"><strong>Actualmente en desarrollo para macOS.</strong> Mantente atento a las actualizaciones.</p>
+
+                <h2 class="mb-md mt-lg">Vista Previa</h2>
+                <div class="app-screenshots">
+                    <div class="screenshot-placeholder"></div>
+                    <div class="screenshot-placeholder"></div>
+                    <div class="screenshot-placeholder"></div>
+                </div>
+
+                <div class="app-subpages">
+                    <a href="/es/apps/kodetime/privacy/">Política de Privacidad</a>
+                    <a href="/es/apps/kodetime/terms/">Términos y Condiciones</a>
+                    <a href="/es/apps/kodetime/support/">Soporte</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="/es/about/">Sobre Mí</a>
+                    <a href="/es/apps/">Apps</a>
+                    <a href="/es/contact/">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

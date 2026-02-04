@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apps by Wilder Lopez - Explore the iOS applications I've built and shipped to the App Store.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Apps - Wilder Lopez">
+    <meta property="og:description" content="Explore the iOS applications built by Wilder Lopez.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopezelias.com/en/apps/">
+
+    <title>Apps - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/en/apps/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/en/" class="nav-logo">Wilder Lopez Elias</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about/" class="nav-link">About</a></li>
+                <li><a href="/en/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/en/contact/" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="/es/apps/" class="lang-switch" title="Cambiar a Español">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/en/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Apps</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">My Apps</h1>
+                <p class="page-subtitle">iOS applications I've built and shipped</p>
+            </header>
+
+            <div class="apps-grid">
+                <a href="/en/apps/clipcard-pro/" class="app-card">
+                    <div class="app-card-content">
+                        <img src="/assets/icons/clipcard-pro.png" alt="ClipCard Pro" class="app-icon-img">
+                        <div class="app-info">
+                            <h3>ClipCard Pro</h3>
+                            <p>Your personal vault for sensitive data. Store credit cards, crypto wallets, and more with Face ID and iCloud sync.</p>
+                            <span class="app-status development">In Development</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/en/apps/phraseai/" class="app-card">
+                    <div class="app-card-content">
+                        <img src="/assets/icons/phraseai.png" alt="PhraseAI" class="app-icon-img">
+                        <div class="app-info">
+                            <h3>PhraseAI</h3>
+                            <p>AI-powered phrase generator. Create, share, and discover inspiring content in 29 languages.</p>
+                            <span class="app-status development">In Development</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/en/apps/kodetime/" class="app-card">
+                    <div class="app-card-content">
+                        <img src="/assets/icons/kodetime.png" alt="Kodetime" class="app-icon-img">
+                        <div class="app-info">
+                            <h3>Kodetime</h3>
+                            <p>AI task estimation for macOS. Get accurate time estimates for development tasks with Claude AI.</p>
+                            <span class="app-status development">In Development</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/en/about/">About</a>
+                    <a href="/en/apps/">Apps</a>
+                    <a href="/en/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>
