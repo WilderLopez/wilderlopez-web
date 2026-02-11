@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Declaración de Accesibilidad de ClipCard Pro - Conoce nuestro compromiso con hacer ClipCard Pro accesible para todos.">
+
+    <title>Accesibilidad - ClipCard Pro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/es/apps/clipcard-pro/accessibility/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/clipcard-pro/accessibility/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/clipcard-pro/accessibility/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/es/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Alternar navegacion">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/es/" class="nav-link">Inicio</a></li>
+                <li><a href="/es/about/" class="nav-link">Sobre Mi</a></li>
+                <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/es/contact/" class="nav-link">Contacto</a></li>
+                <li class="nav-lang"><a href="/en/apps/clipcard-pro/accessibility/" class="lang-switch" title="Switch to English">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Migas de pan">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/es/" class="breadcrumbs-link">Inicio</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/clipcard-pro/" class="breadcrumbs-link">ClipCard Pro</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Accesibilidad</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Accesibilidad</h1>
+                <p class="page-subtitle">ClipCard Pro</p>
+            </header>
+
+            <div class="legal-content">
+
+                <h2>Nuestro Compromiso</h2>
+                <p>
+                    En ClipCard Pro, creemos que todos merecen acceso seguro y sencillo a sus datos sensibles.
+                    Estamos comprometidos a garantizar que nuestra app sea utilizable por la mayor cantidad de personas posible,
+                    incluyendo personas con discapacidades visuales, motoras, auditivas y cognitivas.
+                    La accesibilidad no es algo secundario &mdash; esta integrada en cada funcionalidad desde el inicio.
+                </p>
+
+                <h2>VoiceOver &mdash; Soporte Completo</h2>
+                <p>
+                    ClipCard Pro ofrece soporte integral de VoiceOver en toda la app.
+                    Cada elemento interactivo incluye labels, hints y values descriptivos para que los usuarios
+                    de lectores de pantalla puedan navegar con confianza.
+                </p>
+                <ul>
+                    <li>Traits semanticos (headers, buttons, links, estados seleccionados) para navegacion intuitiva</li>
+                    <li>Contenedores de accesibilidad combinados para navegacion eficiente con swipe</li>
+                    <li>Elementos decorativos ocultos de VoiceOver para reducir el desorden</li>
+                    <li>Labels conscientes de la privacidad: datos sensibles como numeros de tarjeta se leen como "terminada en 1234" en lugar del numero completo</li>
+                    <li>Modo de informacion segura se activa automaticamente cuando se detecta VoiceOver</li>
+                    <li>Anuncios de cambio de pantalla mantienen al usuario orientado durante la navegacion</li>
+                </ul>
+
+                <h2>Dynamic Type &mdash; Soporte Completo</h2>
+                <p>
+                    La app respeta completamente tus preferencias de tamano de texto. Mas de 30 metricas de tamano
+                    en toda la interfaz escalan con Dynamic Type, y las fuentes personalizadas estan configuradas
+                    para escalar correctamente via <code>Font.scaledCustom()</code>. Los layouts se adaptan automaticamente
+                    para acomodar tamanos de texto grandes sin romperse.
+                </p>
+
+                <h2>Reducir Movimiento</h2>
+                <p>
+                    Cuando la configuracion Reducir Movimiento esta activada en tu dispositivo, todas las animaciones se eliminan.
+                    Las transiciones de pagina, expansiones de tarjetas, efectos de seleccion de temas y otros movimientos
+                    en mas de 6 vistas principales se reemplazan con cambios de estado instantaneos para una experiencia comoda.
+                </p>
+
+                <h2>Reducir Transparencia</h2>
+                <p>
+                    Cuando Reducir Transparencia esta activo, los fondos con gradientes se reemplazan automaticamente
+                    por colores solidos. Esto mejora la legibilidad y reduce la complejidad visual para usuarios que
+                    prefieren interfaces con mayor contraste.
+                </p>
+
+                <h2>Modo Oscuro</h2>
+                <p>
+                    ClipCard Pro incluye un sistema de temas completo con variantes de modo claro y oscuro.
+                    Hay multiples temas disponibles, y cada tema ofrece soporte completo de modo oscuro.
+                    La app sigue la preferencia de apariencia de tu sistema automaticamente.
+                </p>
+
+                <h2>Retroalimentacion Haptica</h2>
+                <p>
+                    Un sistema completo de retroalimentacion haptica proporciona confirmacion tactil para acciones clave.
+                    Los hapticos de exito, error, advertencia y seleccion ayudan a los usuarios a entender el resultado de
+                    sus interacciones &mdash; guardar un clip, copiar datos o eliminar una entrada &mdash;
+                    sin depender unicamente de senales visuales.
+                </p>
+
+                <h2>Accesibilidad Consciente de la Privacidad</h2>
+                <p>
+                    La seguridad y la accesibilidad trabajan juntas en ClipCard Pro. La app utiliza enmascaramiento inteligente
+                    por tipo de dato &mdash; tarjetas de credito, numeros de telefono, billeteras cripto y URLs &mdash; para que
+                    VoiceOver nunca lea informacion sensible completa en voz alta.
+                </p>
+                <ul>
+                    <li>Control granular de enmascaramiento por tipo de clip disponible en Configuracion</li>
+                    <li>Modo seguro automatico cuando las tecnologias de asistencia estan activas</li>
+                    <li>Los datos sensibles estan protegidos sin sacrificar la usabilidad</li>
+                </ul>
+
+                <h2>Autenticacion Biometrica</h2>
+                <p>
+                    Face ID y Touch ID estan completamente integrados con prompts accesibles. El flujo de autenticacion
+                    funciona sin problemas con tecnologias de asistencia y proporciona prompts claros y localizados
+                    para que cada usuario pueda desbloquear su boveda de forma segura.
+                </p>
+
+                <h2>Localizacion</h2>
+                <p>
+                    La interfaz esta completamente localizada en espanol, incluyendo todos los labels de accesibilidad.
+                    Los usuarios de VoiceOver pueden navegar la app completamente en su idioma preferido con
+                    descripciones y hints traducidos con precision.
+                </p>
+
+                <h2>Comentarios</h2>
+                <p>
+                    Trabajamos constantemente para mejorar la accesibilidad de ClipCard Pro.
+                    Si experimentas alguna dificultad al usar la app con tecnologias de asistencia,
+                    o si tienes sugerencias sobre como podemos mejorar, contactanos en:
+                    <a href="mailto:support@wilderlopezelias.com">support@wilderlopezelias.com</a>
+                </p>
+
+                <div class="mt-lg">
+                    <a href="/es/apps/clipcard-pro/">&larr; Volver a ClipCard Pro</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="/es/about/">Sobre Mi</a>
+                    <a href="/es/apps/">Apps</a>
+                    <a href="/es/contact/">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>
