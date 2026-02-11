@@ -101,6 +101,11 @@
                     <img src="/assets/screenshots/clipcardpro_6_es.webp" alt="ClipCard Pro - Sincronización iCloud" class="screenshot">
                 </div>
 
+                <section class="changelog-section" data-app-slug="clipcard-pro" data-lang="es">
+                    <h2 class="mb-md mt-lg">Novedades</h2>
+                    <div class="changelog-content"></div>
+                </section>
+
                 <div class="app-subpages">
                     <a href="/es/apps/clipcard-pro/faq/">Preguntas Frecuentes</a>
                     <a href="/es/apps/clipcard-pro/privacy/">Política de Privacidad</a>
@@ -132,6 +137,108 @@
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => navLinks.classList.remove('open'));
         });
+
+        (function() {
+            var section = document.querySelector('.changelog-section');
+            if (!section) return;
+            var slug = section.getAttribute('data-app-slug');
+            var lang = section.getAttribute('data-lang');
+            var content = section.querySelector('.changelog-content');
+            var page = 1;
+            var pageSize = 5;
+            var total = 0;
+            var baseUrl = 'https://panel.wilderlopezelias.com/api/public/changelogs/' + slug;
+            var i18n = lang === 'es' ? {
+                loadMore: 'Ver más',
+                showMore: 'Mostrar más',
+                showLess: 'Mostrar menos',
+                error: 'No se pudieron cargar las novedades.'
+            } : {
+                loadMore: 'Load more',
+                showMore: 'Show more',
+                showLess: 'Show less',
+                error: 'Could not load changelog.'
+            };
+            var locale = lang === 'es' ? 'es-ES' : 'en-US';
+
+            content.innerHTML = '<div class="changelog-skeleton">' +
+                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
+                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
+                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
+                '</div>';
+
+            function formatDate(dateStr) {
+                var d = new Date(dateStr);
+                return d.toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' });
+            }
+
+            function parseBullets(text) {
+                if (!text) return [];
+                return text.split('\n').filter(function(l) { return l.trim().indexOf('- ') === 0; }).map(function(l) { return l.trim().substring(2); });
+            }
+
+            function renderEntry(entry) {
+                var html = '<div class="changelog-entry"><div class="changelog-header">';
+                html += '<span class="changelog-version">' + entry.version + '</span>';
+                if (entry.release_date) html += '<span class="changelog-date">' + formatDate(entry.release_date) + '</span>';
+                html += '</div>';
+                var bullets = parseBullets(entry.bullet_points);
+                if (bullets.length) {
+                    html += '<ul class="changelog-bullets">';
+                    bullets.forEach(function(b) { html += '<li>' + b + '</li>'; });
+                    html += '</ul>';
+                }
+                if (entry.user_changelog && entry.user_changelog.trim()) {
+                    var full = entry.user_changelog.trim();
+                    var truncLen = 150;
+                    if (full.length > truncLen) {
+                        var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
+                        html += '<div class="changelog-description">';
+                        html += '<span id="' + id + '-short">' + full.substring(0, truncLen) + '&hellip; </span>';
+                        html += '<span id="' + id + '-full" style="display:none">' + full + ' </span>';
+                        html += '<button class="changelog-show-more" onclick="var s=document.getElementById(\'' + id + '-short\'),f=document.getElementById(\'' + id + '-full\');if(s.style.display===\'none\'){s.style.display=\'\';f.style.display=\'none\';this.textContent=\'' + i18n.showMore + '\';}else{s.style.display=\'none\';f.style.display=\'\';this.textContent=\'' + i18n.showLess + '\';}">' + i18n.showMore + '</button>';
+                        html += '</div>';
+                    } else {
+                        html += '<div class="changelog-description">' + full + '</div>';
+                    }
+                }
+                html += '</div>';
+                return html;
+            }
+
+            function loadChangelogs(p) {
+                fetch(baseUrl + '?page=' + p + '&page_size=' + pageSize)
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        var entries = data.changelogs || [];
+                        total = data.total || 0;
+                        if (p === 1 && entries.length === 0) {
+                            section.style.display = 'none';
+                            return;
+                        }
+                        if (p === 1) content.innerHTML = '';
+                        var loadMoreBtn = content.querySelector('.changelog-load-more');
+                        if (loadMoreBtn) loadMoreBtn.remove();
+                        entries.forEach(function(e) {
+                            content.insertAdjacentHTML('beforeend', renderEntry(e));
+                        });
+                        if (p * pageSize < total) {
+                            content.insertAdjacentHTML('beforeend', '<button class="btn btn-secondary changelog-load-more">' + i18n.loadMore + '</button>');
+                            content.querySelector('.changelog-load-more').addEventListener('click', function() {
+                                page++;
+                                this.textContent = '...';
+                                this.disabled = true;
+                                loadChangelogs(page);
+                            });
+                        }
+                    })
+                    .catch(function() {
+                        if (p === 1) content.innerHTML = '<p class="changelog-error">' + i18n.error + '</p>';
+                    });
+            }
+
+            loadChangelogs(1);
+        })();
     </script>
 </body>
 </html>
