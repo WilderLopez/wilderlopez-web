@@ -506,6 +506,45 @@ main {
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.app-store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1.25rem 0.5rem 0.85rem;
+    border-radius: 10px;
+    border: 1px solid #a6a6a6;
+    text-decoration: none;
+    transition: opacity var(--transition);
+    line-height: 1;
+}
+
+.app-store-badge:hover {
+    opacity: 0.85;
+}
+
+.app-store-badge svg {
+    flex-shrink: 0;
+}
+
+.app-store-badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-store-badge-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 0.01em;
+}
+
+.app-store-badge-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .app-description {
