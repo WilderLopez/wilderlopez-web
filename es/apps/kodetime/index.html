@@ -165,6 +165,25 @@
                 return text.split('\n').filter(function(l) { return l.trim().indexOf('- ') === 0; }).map(function(l) { return l.trim().substring(2); });
             }
 
+            function parseMarkdown(text) {
+                var lines = text.split('\n'), html = '', inList = false;
+                for (var i = 0; i < lines.length; i++) {
+                    var t = lines[i].trim();
+                    if (!t) { if (inList) { html += '</ul>'; inList = false; } continue; }
+                    if (t.indexOf('## ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h4>' + inlineMd(t.substring(3)) + '</h4>'; continue; }
+                    if (t.indexOf('# ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h3>' + inlineMd(t.substring(2)) + '</h3>'; continue; }
+                    if (t.indexOf('- ') === 0) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inlineMd(t.substring(2)) + '</li>'; continue; }
+                    if (inList) { html += '</ul>'; inList = false; }
+                    html += '<p>' + inlineMd(t) + '</p>';
+                }
+                if (inList) html += '</ul>';
+                return html;
+            }
+
+            function inlineMd(s) {
+                return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            }
+
             function renderEntry(entry) {
                 var html = '<div class="changelog-entry"><div class="changelog-header">';
                 html += '<span class="changelog-version">' + entry.version + '</span>';
@@ -178,17 +197,9 @@
                 }
                 if (entry.user_changelog && entry.user_changelog.trim()) {
                     var full = entry.user_changelog.trim();
-                    var truncLen = 150;
-                    if (full.length > truncLen) {
-                        var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
-                        html += '<div class="changelog-description">';
-                        html += '<span id="' + id + '-short">' + full.substring(0, truncLen) + '&hellip; </span>';
-                        html += '<span id="' + id + '-full" style="display:none">' + full + ' </span>';
-                        html += '<button class="changelog-show-more" onclick="var s=document.getElementById(\'' + id + '-short\'),f=document.getElementById(\'' + id + '-full\');if(s.style.display===\'none\'){s.style.display=\'\';f.style.display=\'none\';this.textContent=\'' + i18n.showMore + '\';}else{s.style.display=\'none\';f.style.display=\'\';this.textContent=\'' + i18n.showLess + '\';}">' + i18n.showMore + '</button>';
-                        html += '</div>';
-                    } else {
-                        html += '<div class="changelog-description">' + full + '</div>';
-                    }
+                    var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
+                    html += '<div class="changelog-description" id="' + id + '">' + parseMarkdown(full) + '</div>';
+                    html += '<button class="changelog-show-more" onclick="var d=document.getElementById(\'' + id + '\');d.classList.toggle(\'expanded\');this.textContent=d.classList.contains(\'expanded\')?\'' + i18n.showLess + '\':\'' + i18n.showMore + '\';">' + i18n.showMore + '</button>';
                 }
                 html += '</div>';
                 return html;

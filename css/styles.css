@@ -652,12 +652,77 @@ main {
 }
 
 .changelog-description {
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
     line-height: 1.6;
     margin-top: var(--spacing-sm);
     border-top: 1px solid var(--color-border);
     padding-top: var(--spacing-sm);
+    max-height: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.changelog-description.expanded {
+    max-height: none;
+}
+
+.changelog-description:not(.expanded)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(transparent, var(--color-bg-secondary));
+    pointer-events: none;
+}
+
+.changelog-description h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 1rem 0 0.4rem;
+}
+
+.changelog-description h3:first-child {
+    margin-top: 0;
+}
+
+.changelog-description h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0.85rem 0 0.3rem;
+}
+
+.changelog-description p {
+    margin: 0.3rem 0;
+}
+
+.changelog-description strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.changelog-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0;
+}
+
+.changelog-description ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+
+.changelog-description ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0.25rem;
+    color: var(--color-accent);
+    font-weight: 700;
 }
 
 .changelog-show-more {
@@ -668,7 +733,8 @@ main {
     border: none;
     padding: 0;
     font-family: inherit;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
+    display: inline-block;
 }
 
 .changelog-show-more:hover {
