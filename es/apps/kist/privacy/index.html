@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de Kist - Conoce cómo protegemos tus datos y privacidad.">
+
+    <title>Política de Privacidad - Kist</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
+    <style>
+      :root { --color-accent: #8FAE9D; --color-accent-hover: #C9A55C; }
+    </style>
+    <link rel="canonical" href="https://wilderlopezelias.com/es/apps/kist/privacy/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/kist/privacy/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/kist/privacy/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/es/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Alternar navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/es/" class="nav-link">Inicio</a></li>
+                <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
+                <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/es/contact/" class="nav-link">Contacto</a></li>
+                <li class="nav-lang"><a href="/en/apps/kist/privacy/" class="lang-switch" title="Switch to English">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Migas de pan">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/es/" class="breadcrumbs-link">Inicio</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><a href="/es/apps/kist/" class="breadcrumbs-link">Kist</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Privacidad</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Política de Privacidad</h1>
+                <p class="page-subtitle">Kist</p>
+            </header>
+
+            <div class="legal-content">
+                <p class="last-updated">Última actualización: Julio 2026</p>
+
+                <h2>Introducción</h2>
+                <p>Kist te ayuda a identificar antigüedades y objetos de segunda mano y a mantener una colección personal. Construimos Kist para respetar tus datos. Esta política explica qué recopilamos y qué no.</p>
+
+                <h2>Las fotos que identificas</h2>
+                <p>Cuando le pides a Kist que identifique un objeto, la foto (o fotos) que eliges se envían por una conexión cifrada a nuestro backend, que las reenvía a proveedores de visión con IA de terceros (actualmente Anthropic y Google) para identificar el objeto y estimar un rango de valor. Nuestro backend no almacena tus fotos: procesa la petición y devuelve el resultado. Según los términos de API de los proveedores, estas imágenes se usan solo para producir tu resultado y no para entrenar sus modelos.</p>
+
+                <h2>Tu colección</h2>
+                <p>Los objetos que guardas (fotos, notas, valores) se almacenan localmente en tu dispositivo. Si activas iCloud, también se sincronizan con tu cuenta privada de iCloud a través de CloudKit de Apple. Esos datos viven en tu cuenta de Apple; nosotros no podemos leerlos.</p>
+
+                <h2>Compras</h2>
+                <p>Las suscripciones (Kist Pro) las procesa Apple a través de la App Store. Nunca recibimos los datos de tu método de pago. Solo sabemos si existe una suscripción activa para que la app desbloquee las funciones Pro.</p>
+
+                <h2>Lo que no hacemos</h2>
+                <p>Sin anuncios. Sin rastreadores ni SDK publicitarios de terceros. No vendemos tus datos. No creamos perfiles publicitarios.</p>
+
+                <h2>Conservación y eliminación de datos</h2>
+                <p>Tú controlas tus datos: borra cualquier objeto en la app, y elimina la app para quitar sus datos locales del dispositivo. Gestiona o elimina los datos de iCloud desde los ajustes de tu cuenta de Apple.</p>
+
+                <h2>Privacidad de menores</h2>
+                <p>Kist no está dirigida a menores ni está pensada para ser usada por personas menores de 13 años.</p>
+
+                <h2>Cambios en esta política</h2>
+                <p>Si esta política cambia, actualizaremos esta página y su fecha de vigencia.</p>
+
+                <h2>Contáctanos</h2>
+                <p>Para preguntas sobre esta Política de Privacidad, contáctanos en: <a href="mailto:legal@wilderlopezelias.com">legal@wilderlopezelias.com</a></p>
+
+                <div class="mt-lg">
+                    <a href="/es/apps/kist/">&larr; Volver a Kist</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="/es/about/">Sobre Mí</a>
+                    <a href="/es/apps/">Apps</a>
+                    <a href="/es/contact/">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

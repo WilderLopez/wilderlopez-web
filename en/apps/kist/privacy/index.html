@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Kist - Learn how we protect your data and privacy.">
+
+    <title>Privacy Policy - Kist</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
+    <style>
+      :root { --color-accent: #8FAE9D; --color-accent-hover: #C9A55C; }
+    </style>
+    <link rel="canonical" href="https://wilderlopezelias.com/en/apps/kist/privacy/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/kist/privacy/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/kist/privacy/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/en/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about/" class="nav-link">About</a></li>
+                <li><a href="/en/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/en/contact/" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="/es/apps/kist/privacy/" class="lang-switch" title="Cambiar a Español">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/en/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><a href="/en/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><a href="/en/apps/kist/" class="breadcrumbs-link">Kist</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Privacy</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">Kist</p>
+            </header>
+
+            <div class="legal-content">
+                <p class="last-updated">Last updated: July 2026</p>
+
+                <h2>Introduction</h2>
+                <p>Kist helps you identify antiques and second-hand objects and keep a personal collection. We built Kist to respect your data. This policy explains what we collect and what we do not.</p>
+
+                <h2>Photos you identify</h2>
+                <p>When you ask Kist to identify an object, the photo (or photos) you choose are sent over an encrypted connection to our backend, which forwards them to third-party AI vision providers (currently Anthropic and Google) to identify the object and estimate a value range. Our backend does not store your photos: it processes the request and returns the result. Under the providers' API terms, this image data is used only to produce your result and is not used to train their models.</p>
+
+                <h2>Your collection</h2>
+                <p>The objects you save (photos, notes, values) are stored locally on your device. If you enable iCloud, they also sync to your private iCloud account through Apple's CloudKit. That data lives in your Apple account; we cannot read it.</p>
+
+                <h2>Purchases</h2>
+                <p>Subscriptions (Kist Pro) are processed by Apple through the App Store. We never receive your payment details. We only learn whether an active subscription exists so the app can unlock Pro features.</p>
+
+                <h2>What we do not do</h2>
+                <p>No ads. No third-party tracking or advertising SDKs. We do not sell your data. We do not build advertising profiles.</p>
+
+                <h2>Data retention and deletion</h2>
+                <p>You control your data: delete any object in the app, and delete the app to remove its local data from your device. Manage or delete iCloud data through your Apple account settings.</p>
+
+                <h2>Children's privacy</h2>
+                <p>Kist is not directed to children and is not intended for use by anyone under 13.</p>
+
+                <h2>Changes to this policy</h2>
+                <p>If this policy changes, we will update this page and its effective date.</p>
+
+                <h2>Contact us</h2>
+                <p>For questions about this Privacy Policy, contact us at: <a href="mailto:legal@wilderlopezelias.com">legal@wilderlopezelias.com</a></p>
+
+                <div class="mt-lg">
+                    <a href="/en/apps/kist/">&larr; Back to Kist</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/en/about/">About</a>
+                    <a href="/en/apps/">Apps</a>
+                    <a href="/en/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

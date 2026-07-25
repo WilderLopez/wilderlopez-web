@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kist - The honest antique identifier for iOS. Identify antiques and manage your collection with an honest AI value range.">
+
+    <meta property="og:title" content="Kist - Wilder Lopez">
+    <meta property="og:description" content="Kist - The honest antique identifier for iOS. Identify antiques and manage your collection with an honest AI value range.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopezelias.com/en/apps/kist/">
+
+    <title>Kist - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
+    <style>
+      :root { --color-accent: #8FAE9D; --color-accent-hover: #C9A55C; }
+    </style>
+    <link rel="canonical" href="https://wilderlopezelias.com/en/apps/kist/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/apps/kist/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/apps/kist/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/en/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about/" class="nav-link">About</a></li>
+                <li><a href="/en/apps/" class="nav-link active">Apps</a></li>
+                <li><a href="/en/contact/" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="/es/apps/kist/" class="lang-switch" title="Cambiar a Español">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/en/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><a href="/en/apps/" class="breadcrumbs-link">Apps</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Kist</span></li>
+                </ol>
+            </nav>
+
+            <div class="app-detail">
+                <div class="app-detail-header">
+                    <img src="/assets/icons/kist.webp" alt="Kist" class="app-detail-icon-img">
+                    <div class="app-detail-info">
+                        <h1>Kist</h1>
+                        <p class="tagline">The honest antique identifier</p>
+                        <span class="platform-badge">iOS</span>
+                        <div class="app-links">
+                            <span class="btn btn-secondary" style="cursor: default;">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-description">
+                    <p>Kist identifies antiques and second-hand finds from a photo and gives you an honest AI value range, never a fake-precise number. But the real product is your collection: save it, annotate it, see its value, and export it. Yours to keep.</p>
+                </div>
+
+                <h2 class="mb-md">Features</h2>
+                <ul class="feature-list">
+                    <li><strong>Honest identification</strong> - What it is, era, and materials from a single photo</li>
+                    <li><strong>Value as a range</strong> - Always a range with confidence, never a fake-precise number</li>
+                    <li><strong>A real native collection</strong> - Save, edit, search and organize your objects</li>
+                    <li><strong>iCloud sync</strong> - Your collection across your devices, privately</li>
+                    <li><strong>Export CSV / PDF</strong> - Your data is yours, take it anywhere</li>
+                    <li><strong>Home Screen widget</strong> - Your collection's estimated value at a glance</li>
+                    <li><strong>Honest paywall</strong> - Real free tier, no card required, no dark patterns</li>
+                </ul>
+
+                <p class="mt-lg"><strong>Currently in development.</strong> Coming soon to the App Store.</p>
+
+                <section class="changelog-section" data-app-slug="kist" data-lang="en">
+                    <h2 class="mb-md mt-lg">What's New</h2>
+                    <div class="changelog-content"></div>
+                </section>
+
+                <div class="app-subpages">
+                    <a href="/en/apps/kist/privacy/">Privacy Policy</a>
+                    <a href="/en/apps/kist/terms/">Terms &amp; Conditions</a>
+                    <a href="/en/apps/kist/support/">Support</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/en/about/">About</a>
+                    <a href="/en/apps/">Apps</a>
+                    <a href="/en/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        (function() {
+            var section = document.querySelector('.changelog-section');
+            if (!section) return;
+            var slug = section.getAttribute('data-app-slug');
+            var lang = section.getAttribute('data-lang');
+            var content = section.querySelector('.changelog-content');
+            var page = 1;
+            var pageSize = 5;
+            var total = 0;
+            var baseUrl = 'https://panel.wilderlopezelias.com/api/public/changelogs/' + slug;
+            var i18n = lang === 'es' ? {
+                loadMore: 'Ver más', showMore: 'Mostrar más', showLess: 'Mostrar menos',
+                error: 'No se pudieron cargar las novedades.'
+            } : {
+                loadMore: 'Load more', showMore: 'Show more', showLess: 'Show less',
+                error: 'Could not load changelog.'
+            };
+            var locale = lang === 'es' ? 'es-ES' : 'en-US';
+            content.innerHTML = '<div class="changelog-skeleton">' +
+                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
+                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
+                '</div>';
+            function formatDate(dateStr) { var d = new Date(dateStr); return d.toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' }); }
+            function parseBullets(text) { if (!text) return []; return text.split('\n').filter(function(l) { return l.trim().indexOf('- ') === 0; }).map(function(l) { return l.trim().substring(2); }); }
+            function parseMarkdown(text) {
+                var lines = text.split('\n'), html = '', inList = false;
+                for (var i = 0; i < lines.length; i++) {
+                    var t = lines[i].trim();
+                    if (!t) { if (inList) { html += '</ul>'; inList = false; } continue; }
+                    if (t.indexOf('## ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h4>' + inlineMd(t.substring(3)) + '</h4>'; continue; }
+                    if (t.indexOf('# ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h3>' + inlineMd(t.substring(2)) + '</h3>'; continue; }
+                    if (t.indexOf('- ') === 0) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inlineMd(t.substring(2)) + '</li>'; continue; }
+                    if (inList) { html += '</ul>'; inList = false; }
+                    html += '<p>' + inlineMd(t) + '</p>';
+                }
+                if (inList) html += '</ul>';
+                return html;
+            }
+            function inlineMd(s) { return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); }
+            function renderEntry(entry) {
+                var html = '<div class="changelog-entry"><div class="changelog-header">';
+                html += '<span class="changelog-version">' + entry.version + '</span>';
+                if (entry.release_date) html += '<span class="changelog-date">' + formatDate(entry.release_date) + '</span>';
+                html += '</div>';
+                var bullets = parseBullets(entry.bullet_points);
+                if (bullets.length) { html += '<ul class="changelog-bullets">'; bullets.forEach(function(b) { html += '<li>' + b + '</li>'; }); html += '</ul>'; }
+                if (entry.user_changelog && entry.user_changelog.trim()) {
+                    var full = entry.user_changelog.trim();
+                    var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
+                    html += '<div class="changelog-description" id="' + id + '">' + parseMarkdown(full) + '</div>';
+                    html += '<button class="changelog-show-more" onclick="var d=document.getElementById(\'' + id + '\');d.classList.toggle(\'expanded\');this.textContent=d.classList.contains(\'expanded\')?\'' + i18n.showLess + '\':\'' + i18n.showMore + '\';">' + i18n.showMore + '</button>';
+                }
+                html += '</div>';
+                return html;
+            }
+            function loadChangelogs(p) {
+                fetch(baseUrl + '?page=' + p + '&page_size=' + pageSize)
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        var entries = data.changelogs || [];
+                        total = data.total || 0;
+                        if (p === 1 && entries.length === 0) { section.style.display = 'none'; return; }
+                        if (p === 1) content.innerHTML = '';
+                        var loadMoreBtn = content.querySelector('.changelog-load-more');
+                        if (loadMoreBtn) loadMoreBtn.remove();
+                        entries.forEach(function(e) { content.insertAdjacentHTML('beforeend', renderEntry(e)); });
+                        if (p * pageSize < total) {
+                            content.insertAdjacentHTML('beforeend', '<button class="btn btn-secondary changelog-load-more">' + i18n.loadMore + '</button>');
+                            content.querySelector('.changelog-load-more').addEventListener('click', function() { page++; this.textContent = '...'; this.disabled = true; loadChangelogs(page); });
+                        }
+                    })
+                    .catch(function() { if (p === 1) content.innerHTML = '<p class="changelog-error">' + i18n.error + '</p>'; });
+            }
+            loadChangelogs(1);
+        })();
+    </script>
+</body>
+</html>
