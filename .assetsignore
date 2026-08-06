@@ -2,3 +2,4 @@
 # subir .git/ entero y falla con packs >25 MiB (límite por archivo de Workers assets).
 .git
 wrangler.json
+.wrangler
