@@ -509,7 +509,8 @@ main {
     align-items: center;
 }
 
-.app-store-badge {
+.app-store-badge,
+.testflight-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -523,11 +524,13 @@ main {
     line-height: 1;
 }
 
-.app-store-badge:hover {
+.app-store-badge:hover,
+.testflight-badge:hover {
     opacity: 0.85;
 }
 
-.app-store-badge svg {
+.app-store-badge svg,
+.testflight-badge svg {
     flex-shrink: 0;
 }
 
