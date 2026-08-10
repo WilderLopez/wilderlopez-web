@@ -71,9 +71,10 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="app-badges">
+                        <!-- El badge se oculta solo si ProductWatch no sirve la imagen, para no dejar un icono roto en la ficha -->
+                        <div class="app-badges" hidden>
                             <a href="https://productwatch.io/products/kist-antique-identifier?utm_source=badge" target="_blank" rel="noopener">
-                                <img src="https://productwatch.io/backend/api/v1/badge/featured?productId=4363dda7-3b23-4f31-8203-272d2611380a&amp;darkMode=true" alt="Kist: Antique Identifier featured on ProductWatch" width="250" height="52" loading="lazy">
+                                <img src="https://productwatch.io/backend/api/v1/badge/featured?productId=4363dda7-3b23-4f31-8203-272d2611380a&amp;darkMode=true" alt="Kist: Antique Identifier featured on ProductWatch" width="250" height="52" onload="this.closest('.app-badges').hidden = false">
                             </a>
                         </div>
                     </div>
