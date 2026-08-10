@@ -547,6 +547,37 @@ main {
     letter-spacing: -0.01em;
 }
 
+/* Insignias externas (ProductWatch, Product Hunt, ...) */
+.app-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.app-badges a {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 10px;
+    transition: opacity var(--transition);
+}
+
+.app-badges a:hover {
+    opacity: 0.85;
+}
+
+.app-badges a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.app-badges img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
 .app-description {
     color: var(--color-text-secondary);
     line-height: 1.8;
@@ -818,11 +849,13 @@ main {
     margin-bottom: var(--spacing-md);
 }
 
-.legal-content a {
+.legal-content a,
+.text-link {
     color: var(--color-accent);
 }
 
-.legal-content a:hover {
+.legal-content a:hover,
+.text-link:hover {
     text-decoration: underline;
 }
 
