@@ -70,11 +70,9 @@
                                     <span class="app-store-badge-title">TestFlight</span>
                                 </span>
                             </a>
-                        </div>
-                        <!-- El badge se oculta solo si ProductWatch no sirve la imagen, para no dejar un icono roto en la ficha -->
-                        <div class="app-badges" hidden>
-                            <a href="https://productwatch.io/products/kist-antique-identifier?utm_source=badge" target="_blank" rel="noopener">
-                                <img src="https://productwatch.io/backend/api/v1/badge/featured?productId=4363dda7-3b23-4f31-8203-272d2611380a&amp;darkMode=true" alt="Kist: Antique Identifier destacada en ProductWatch" width="250" height="52" onload="this.closest('.app-badges').hidden = false">
+                            <!-- Badge servido desde assets: el endpoint de ProductWatch responde 404 para este productId -->
+                            <a href="https://productwatch.io/products/kist-antique-identifier?utm_source=badge" class="external-badge" target="_blank" rel="noopener">
+                                <img src="/assets/badges/productwatch-featured-dark.svg" alt="Kist: Antique Identifier destacada en ProductWatch" width="250" height="52">
                             </a>
                         </div>
                     </div>

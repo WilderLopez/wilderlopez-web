@@ -550,38 +550,24 @@ main {
     letter-spacing: -0.01em;
 }
 
-/* Insignias externas (ProductWatch, Product Hunt, ...) */
-
-/* Sin esto el display:flex de abajo ganaría al atributo hidden y se vería el icono roto */
-.app-badges[hidden] {
-    display: none;
-}
-
-.app-badges {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-md);
-}
-
-.app-badges a {
+/* Insignias externas (ProductWatch, Product Hunt, ...), en la misma fila que los botones de descarga */
+.external-badge {
     display: inline-block;
     line-height: 0;
     border-radius: 10px;
     transition: opacity var(--transition);
 }
 
-.app-badges a:hover {
+.external-badge:hover {
     opacity: 0.85;
 }
 
-.app-badges a:focus-visible {
+.external-badge:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
 }
 
-.app-badges img {
+.external-badge img {
     width: 250px;
     max-width: 100%;
     height: auto;
