@@ -551,6 +551,12 @@ main {
 }
 
 /* Insignias externas (ProductWatch, Product Hunt, ...) */
+
+/* Sin esto el display:flex de abajo ganaría al atributo hidden y se vería el icono roto */
+.app-badges[hidden] {
+    display: none;
+}
+
 .app-badges {
     display: flex;
     flex-wrap: wrap;
