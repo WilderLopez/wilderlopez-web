@@ -11,20 +11,15 @@
     <meta property="og:url" content="https://wilderlopezelias.com/es/apps/kist/">
     <meta property="og:locale" content="es_ES">
     <meta property="og:locale:alternate" content="en_US">
-    <!-- TODO(assets): descomentar al subir kist-og.jpg (1200x630) a /assets/apps/kist/.
-         Comentada a proposito: un og:image que da 404 hace que X y Facebook cacheen el fallo.
     <meta property="og:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Kist en iPhone: sabe lo que valen tus hallazgos">
-    -->
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kist - El identificador de antigüedades honesto">
     <meta name="twitter:description" content="Fotografía una antigüedad o un hallazgo de segunda mano y obtén un rango de valor honesto con su nivel de confianza. Cinco identificaciones gratis, sin tarjeta y sin anuncios.">
-    <!-- TODO(assets): descomentar junto con og:image.
     <meta name="twitter:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
-    -->
 
     <!-- Banner nativo de App Store en Safari iOS. -->
     <meta name="apple-itunes-app" content="app-id=6792853183">
@@ -43,6 +38,65 @@
 
     <!-- Umami Analytics -->
     <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kist: Antique Identifier",
+      "applicationCategory": "ReferenceApplication",
+      "operatingSystem": "iOS 18.0 o posterior",
+      "inLanguage": "es",
+      "url": "https://wilderlopezelias.com/es/apps/kist/",
+      "downloadUrl": "https://apps.apple.com/us/app/kist-antique-identifier/id6792853183",
+      "softwareVersion": "1.0",
+      "author": { "@type": "Person", "name": "Wilder Lopez", "url": "https://wilderlopezelias.com/es/" },
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Cinco identificaciones gratis, sin pedir tarjeta" },
+        { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Kist Pro, identificaciones ilimitadas, anual" }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Kist es gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, las cinco primeras identificaciones, y no se pide tarjeta para ellas. Después, Pro desbloquea identificaciones ilimitadas. Todo lo demás de la app es gratis para siempre." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito una cuenta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Kist abre directamente en tu colección. No hay registro ni inicio de sesión." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esto es una tasación?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Es una estimación de IA, y cada resultado lo dice. Para un seguro, una herencia o una venta de valor real, acude a un tasador certificado. Kist sirve para saber si algo merece ese viaje." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué es malo Kist?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En las categorías muy reproducidas. El latón, los baños de plata y todo aquello en lo que una reproducción de los años setenta sale idéntica en foto al original de 1890. En esos casos devuelve un rango amplio y una confianza baja, que es la respuesta correcta aunque no sea la que apetece." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde vive mi colección?",
+          "acceptedAnswer": { "@type": "Answer", "text": "En tu dispositivo, y en tu propio iCloud si lo tienes activado. Puedes exportarla entera a CSV o PDF cuando quieras, también en el plan gratis." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para usarla?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un iPhone o iPad con iOS 18 o posterior." }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -99,10 +153,77 @@
                 </div>
 
                 <div class="app-description">
-                    <p>Kist identifica antigüedades y hallazgos de segunda mano a partir de una foto y te da un rango de valor con IA honesto, nunca un número falsamente preciso. Pero el producto de verdad es tu colección: guárdala, anótala, mira su valor y expórtala. Es tuya.</p>
+                    <p>Fotografía una antigüedad, un hallazgo de segunda mano o algo que has heredado. Kist te dice qué es, de cuándo es más o menos, de qué está hecho y un rango de valor honesto con su nivel de confianza. Todo lo que identificas va a una colección que sigue siendo tuya: en tu dispositivo, en tu propio iCloud y exportable cuando te dé la gana.</p>
                 </div>
 
-                <h2 class="mb-md">Características</h2>
+                <h2 class="mb-md">Míralo</h2>
+                <div class="app-screenshots">
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-identify-720.webp"
+                             srcset="/assets/apps/kist/kist-identify-720.webp 720w, /assets/apps/kist/kist-identify-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="Kist en iPhone identificando una lámpara de mesa de vidriera">
+                        <figcaption>
+                            <h3>Fotografíalo</h3>
+                            <p>Qué es, su época probable y el material, a partir de una sola foto.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-value-720.webp"
+                             srcset="/assets/apps/kist/kist-value-720.webp 720w, /assets/apps/kist/kist-value-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="Kist mostrando un rango de valor estimado de 30 a 120 dólares con un medidor de confianza alta">
+                        <figcaption>
+                            <h3>Un rango honesto</h3>
+                            <p>Un rango, un medidor de confianza y piezas comparables a la venta ahora mismo.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-collection-720.webp"
+                             srcset="/assets/apps/kist/kist-collection-720.webp 720w, /assets/apps/kist/kist-collection-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="La pantalla de colección de Kist con cinco objetos guardados y un valor total estimado">
+                        <figcaption>
+                            <h3>Sigue siendo tuya</h3>
+                            <p>Todo lo que guardas va a una colección que es tuya y que puedes exportar.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <section class="split-section mt-lg">
+                    <div class="split-text">
+                        <h2 class="mb-md">Por qué un rango y no un número</h2>
+                        <p>Cualquier app que te diga que el jarrón de tu abuela vale exactamente 247 $ está adivinando, y además te esconde que está adivinando.</p>
+                        <p>Kist siempre enseña un rango, siempre enseña cuánta confianza tiene el modelo de verdad, y todos los resultados llevan la misma línea: esto es una estimación de IA, no una tasación profesional. Cuando no lo sabe, lo dice con un rango amplio y una confianza baja en lugar de inventarse precisión.</p>
+                        <p>Ser honesto con la incertidumbre es la decisión de producto más difícil. Y es justo de lo que va todo esto.</p>
+                    </div>
+                    <div class="split-media">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-detail-720.webp"
+                             srcset="/assets/apps/kist/kist-detail-720.webp 720w, /assets/apps/kist/kist-detail-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="La ficha de un objeto en Kist con el rango de valor estimado y el aviso de estimación con IA">
+                    </div>
+                </section>
+
+                <h2 class="mb-md mt-lg">Kist en 30 segundos</h2>
+                <p class="text-muted mb-md">Sin narración y sin música. Solo la app haciendo lo suyo.</p>
+                <video controls preload="none"
+                       poster="/assets/apps/kist/kist-video-poster.jpg"
+                       width="1920" height="1080"
+                       class="app-video"
+                       playsinline>
+                  <source src="/assets/apps/kist/kist-introducing.mp4" type="video/mp4">
+                </video>
+
+                <h2 class="mb-md mt-lg">Características</h2>
                 <ul class="feature-list">
                     <li><strong>Identificación honesta</strong> - Qué es, época y materiales a partir de una sola foto</li>
                     <li><strong>Valor como rango</strong> - Siempre un rango con confianza, nunca un número falsamente preciso</li>
@@ -110,10 +231,46 @@
                     <li><strong>Sincronización iCloud</strong> - Tu colección en todos tus dispositivos, en privado</li>
                     <li><strong>Exportar CSV / PDF</strong> - Tus datos son tuyos, llévatelos a donde quieras</li>
                     <li><strong>Widget de pantalla de inicio</strong> - El valor estimado de tu colección de un vistazo</li>
+                    <li><strong>Veredicto de flip</strong> - Escribe lo que te piden por la pieza y Kist te hace las cuentas de la reventa</li>
                     <li><strong>Precio honesto</strong> - Cinco identificaciones gratis, sin tarjeta, sin anuncios, sin patrones oscuros</li>
                 </ul>
 
-                <p class="mt-lg"><strong>Kist 1.0 ya está en la App Store.</strong> Cinco identificaciones gratis, sin tarjeta y sin anuncios. Requiere un iPhone o iPad con iOS 18 o posterior.</p>
+                <section class="split-section mt-lg">
+                    <div class="split-text">
+                        <h2 class="mb-md">El precio, en palabras claras</h2>
+                        <p><strong>Gratis:</strong> cinco identificaciones, sin tarjeta y sin anuncios.</p>
+                        <p><strong>Pro:</strong> identificaciones ilimitadas, y nada más. Tu colección, la exportación a CSV y PDF y el widget de pantalla de inicio son gratis pagues o no. 29,99 $ al año o 4,99 $ al mes en EE. UU.; el App Store te enseña el precio de tu región. Cancelar es un enlace visible en el propio muro de pago.</p>
+                    </div>
+                    <div class="split-media">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-pricing-720.webp"
+                             srcset="/assets/apps/kist/kist-pricing-720.webp 720w, /assets/apps/kist/kist-pricing-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="El muro de pago de Kist con el plan gratis, el precio anual y un enlace de cancelación visible">
+                    </div>
+                </section>
+
+                <h2 class="mb-md mt-lg">Preguntas</h2>
+                <div class="faq-list">
+                    <h3>¿Kist es gratis?</h3>
+                    <p>Sí, las cinco primeras identificaciones, y no se pide tarjeta para ellas. Después, Pro desbloquea identificaciones ilimitadas. Todo lo demás de la app es gratis para siempre.</p>
+
+                    <h3>¿Necesito una cuenta?</h3>
+                    <p>No. Kist abre directamente en tu colección. No hay registro ni inicio de sesión.</p>
+
+                    <h3>¿Esto es una tasación?</h3>
+                    <p>No. Es una estimación de IA, y cada resultado lo dice. Para un seguro, una herencia o una venta de valor real, acude a un tasador certificado. Kist sirve para saber si algo merece ese viaje.</p>
+
+                    <h3>¿En qué es malo Kist?</h3>
+                    <p>En las categorías muy reproducidas. El latón, los baños de plata y todo aquello en lo que una reproducción de los años setenta sale idéntica en foto al original de 1890. En esos casos devuelve un rango amplio y una confianza baja, que es la respuesta correcta aunque no sea la que apetece.</p>
+
+                    <h3>¿Dónde vive mi colección?</h3>
+                    <p>En tu dispositivo, y en tu propio iCloud si lo tienes activado. Puedes exportarla entera a CSV o PDF cuando quieras, también en el plan gratis.</p>
+
+                    <h3>¿Qué necesito para usarla?</h3>
+                    <p>Un iPhone o iPad con iOS 18 o posterior.</p>
+                </div>
 
                 <section class="changelog-section" data-app-slug="kist" data-lang="es">
                     <h2 class="mb-md mt-lg">Novedades</h2>
