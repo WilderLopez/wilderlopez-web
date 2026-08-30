@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kist - The honest antique identifier for iOS. Identify antiques and manage your collection with an honest AI value range. Now in public beta on TestFlight.">
+    <meta name="description" content="Kist is an honest antique identifier for iPhone and iPad. Photograph an antique or a thrift find and get what it is, its era, and a value range with a confidence score. Five identifications free, no credit card, no ads.">
 
-    <meta property="og:title" content="Kist - Wilder Lopez">
-    <meta property="og:description" content="Kist - The honest antique identifier for iOS. Identify antiques and manage your collection with an honest AI value range. Now in public beta on TestFlight.">
+    <title>Kist - The honest antique identifier for iPhone and iPad</title>
+
+    <!-- Banner nativo de App Store en Safari iOS. Una linea, mucha conversion. -->
+    <meta name="apple-itunes-app" content="app-id=6792853183">
+
+    <meta property="og:title" content="Kist - The honest antique identifier">
+    <meta property="og:description" content="Photograph an antique or a thrift find and get an honest value range with a confidence score. Five identifications free, no credit card, no ads.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wilderlopezelias.com/en/apps/kist/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <!-- TODO(assets): descomentar al subir kist-og.jpg (1200x630) a /assets/apps/kist/.
+         Se deja comentado a proposito: apuntar a un archivo que da 404 hace que X y
+         Facebook cacheen el fallo, y purgar esa cache cuesta mas que no tener tarjeta.
+    <meta property="og:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kist on iPhone: know what your finds are worth">
+    -->
 
-    <title>Kist - Wilder Lopez</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kist - The honest antique identifier">
+    <meta name="twitter:description" content="Photograph an antique or a thrift find and get an honest value range with a confidence score. Five identifications free, no credit card, no ads.">
+    <!-- TODO(assets): descomentar junto con og:image.
+    <meta name="twitter:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
+    -->
+
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
     <style>
@@ -24,6 +45,63 @@
 
     <!-- Umami Analytics -->
     <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kist: Antique Identifier",
+      "applicationCategory": "ReferenceApplication",
+      "operatingSystem": "iOS 18.0 or later",
+      "url": "https://wilderlopezelias.com/en/apps/kist/",
+      "downloadUrl": "https://apps.apple.com/us/app/kist-antique-identifier/id6792853183",
+      "softwareVersion": "1.0",
+      "author": { "@type": "Person", "name": "Wilder Lopez", "url": "https://wilderlopezelias.com/en/" },
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Five identifications free, no credit card required" },
+        { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Kist Pro, unlimited identifications, annual" }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Kist free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, for the first five identifications, and no credit card is asked for them. After that, Pro unlocks unlimited identifications. Everything else in the app is free forever." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Kist opens straight into your collection. There is no sign up and no login." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this an appraisal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It is an AI estimate, and every result says so. For insurance, probate or a sale of real value, get a certified appraiser. Kist is for knowing whether something is worth that trip." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Kist bad at?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Heavily reproduced categories. Brass, silver plate, and anything where a 1970s reproduction photographs identically to the 1890s original. In those cases it returns a wide range and a low confidence score, which is the correct answer and not a satisfying one." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does my collection live?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On your device, and in your own iCloud if you have it on. You can export the whole thing to CSV or PDF at any time, on the free tier too." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to run it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An iPhone or iPad on iOS 18 or later." }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -61,28 +139,108 @@
                         <h1>Kist</h1>
                         <p class="tagline">The honest antique identifier</p>
                         <span class="platform-badge">iOS 18+</span>
-                        <span class="app-status beta">Public Beta</span>
+                        <span class="app-status live">Version 1.0</span>
                         <div class="app-links">
-                            <a href="https://testflight.apple.com/join/MfkEJ7Ap" class="testflight-badge" target="_blank" rel="noopener" aria-label="Join the Kist beta on TestFlight">
-                                <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#fff" d="M22.6 1.4 1.6 9.6c-.6.2-.6 1 0 1.2l7.5 2.9 11.4-10.3-9 11.5 2.9 7.5c.2.6 1 .6 1.2 0l8.2-21c.2-.5-.3-1-.7-.8z"/></svg>
-                                <span class="app-store-badge-text">
-                                    <span class="app-store-badge-subtitle">Join the beta on</span>
-                                    <span class="app-store-badge-title">TestFlight</span>
-                                </span>
+                            <!-- Badge oficial de Apple, descargado de developer.apple.com y servido "as is".
+                                 No se recolorea, no se traduce, no se anima. Alto en pantalla 48 px (minimo 40). -->
+                            <a href="https://apps.apple.com/us/app/kist-antique-identifier/id6792853183" class="app-store-link" target="_blank" rel="noopener" aria-label="Download Kist on the App Store">
+                                <img src="/assets/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="144" height="48">
                             </a>
                             <!-- Badge servido desde assets: el endpoint de ProductWatch responde 404 para este productId -->
                             <a href="https://productwatch.io/products/kist-antique-identifier?utm_source=badge" class="external-badge" target="_blank" rel="noopener">
                                 <img src="/assets/badges/productwatch-featured-dark.svg" alt="Kist: Antique Identifier featured on ProductWatch" width="250" height="52">
                             </a>
                         </div>
+                        <p class="app-cta-note">5 free identifications. No credit card. No ads.</p>
                     </div>
                 </div>
 
                 <div class="app-description">
-                    <p>Kist identifies antiques and second-hand finds from a photo and gives you an honest AI value range, never a fake-precise number. But the real product is your collection: save it, annotate it, see its value, and export it. Yours to keep.</p>
+                    <p>Photograph an antique, a thrift find or something you inherited. Kist tells you what it is, roughly when it was made, what it is made of, and an honest value range with a confidence score. Everything you identify goes into a collection that stays yours: on your device, in your own iCloud, and exportable whenever you want.</p>
                 </div>
 
-                <h2 class="mb-md">Features</h2>
+                <!-- ============================================================
+                     TODO(assets): seccion "See it". Descomentar tal cual al copiar
+                     kist-identify / kist-value / kist-collection (-1080 y -720 .webp)
+                     desde docs/social/web/ del repo de Kist a /assets/apps/kist/.
+                     Se deja comentada para no publicar imagenes rotas en produccion.
+                <h2 class="mb-md">See it</h2>
+                <div class="app-screenshots">
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-identify-720.webp"
+                             srcset="/assets/apps/kist/kist-identify-720.webp 720w, /assets/apps/kist/kist-identify-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="Kist on iPhone identifying a stained glass table lamp">
+                        <figcaption>
+                            <h3>Photograph it</h3>
+                            <p>What it is, the likely era, and the material, from one photo.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-value-720.webp"
+                             srcset="/assets/apps/kist/kist-value-720.webp 720w, /assets/apps/kist/kist-value-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="Kist showing an estimated value range of $30 to $120 with a high confidence meter">
+                        <figcaption>
+                            <h3>An honest range</h3>
+                            <p>A range, a confidence meter, and comparable pieces on sale right now.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="device-figure">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-collection-720.webp"
+                             srcset="/assets/apps/kist/kist-collection-720.webp 720w, /assets/apps/kist/kist-collection-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="The Kist collection screen with five saved objects and a total estimated value">
+                        <figcaption>
+                            <h3>It stays yours</h3>
+                            <p>Everything you save lands in a collection you own and can export.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                     ============================================================ -->
+
+                <section class="split-section mt-lg">
+                    <div class="split-text">
+                        <h2 class="mb-md">Why a range and not a number</h2>
+                        <p>Any app that tells you your grandmother's vase is worth exactly $247 is guessing and hiding that it is guessing.</p>
+                        <p>Kist always shows a range, always shows how confident the model actually is, and every result carries the same line: this is an AI estimate, not a professional appraisal. When it does not know, it says so with a wide range and a low confidence score instead of inventing precision.</p>
+                        <p>Being honest about uncertainty is the harder product decision. It is also the whole point.</p>
+                    </div>
+                    <!-- TODO(assets): descomentar al copiar kist-detail-*.webp a /assets/apps/kist/.
+                    <div class="split-media">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-detail-720.webp"
+                             srcset="/assets/apps/kist/kist-detail-720.webp 720w, /assets/apps/kist/kist-detail-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="A Kist item page showing the estimated value range and the AI estimate disclaimer">
+                    </div>
+                    -->
+                </section>
+
+                <!-- ============================================================
+                     TODO(assets): seccion de video. Descomentar al copiar
+                     kist-introducing.mp4 (5,8 MB) y kist-video-poster.jpg a
+                     /assets/apps/kist/. preload="none" es obligatorio, y no lleva
+                     autoplay a proposito (penaliza el LCP y molesta).
+                <h2 class="mb-md mt-lg">Kist in 30 seconds</h2>
+                <p class="text-muted mb-md">No narration, no music. Just the app doing the thing.</p>
+                <video controls preload="none"
+                       poster="/assets/apps/kist/kist-video-poster.jpg"
+                       width="1920" height="1080"
+                       class="app-video"
+                       playsinline>
+                  <source src="/assets/apps/kist/kist-introducing.mp4" type="video/mp4">
+                </video>
+                     ============================================================ -->
+
+                <h2 class="mb-md mt-lg">Features</h2>
                 <ul class="feature-list">
                     <li><strong>Honest identification</strong> - What it is, era, and materials from a single photo</li>
                     <li><strong>Value as a range</strong> - Always a range with confidence, never a fake-precise number</li>
@@ -90,21 +248,91 @@
                     <li><strong>iCloud sync</strong> - Your collection across your devices, privately</li>
                     <li><strong>Export CSV / PDF</strong> - Your data is yours, take it anywhere</li>
                     <li><strong>Home Screen widget</strong> - Your collection's estimated value at a glance</li>
-                    <li><strong>Honest paywall</strong> - Real free tier, no card required, no dark patterns</li>
+                    <li><strong>Flip verdict</strong> - Type what they are asking and Kist does the resale math for you</li>
+                    <li><strong>Honest pricing</strong> - Five identifications free, no card, no ads, no dark patterns</li>
                 </ul>
 
-                <p class="mt-lg"><strong>The public beta is open.</strong> Join it on <a href="https://testflight.apple.com/join/MfkEJ7Ap" class="text-link" target="_blank" rel="noopener">TestFlight</a> (iOS 18+), free identifications with no card required. App Store release coming soon.</p>
+                <section class="split-section mt-lg">
+                    <div class="split-text">
+                        <h2 class="mb-md">Pricing, in plain words</h2>
+                        <p><strong>Free:</strong> five identifications, no credit card, no ads.</p>
+                        <p><strong>Pro:</strong> unlimited identifications, and nothing else. Your collection, the CSV and PDF export and the Home Screen widget are free whether you pay or not. $29.99 a year or $4.99 a month in the US; the App Store shows the price for your region. Cancel is a visible link on the paywall itself.</p>
+                    </div>
+                    <!-- TODO(assets): descomentar al copiar kist-pricing-*.webp a /assets/apps/kist/.
+                    <div class="split-media">
+                        <img class="device-shot"
+                             src="/assets/apps/kist/kist-pricing-720.webp"
+                             srcset="/assets/apps/kist/kist-pricing-720.webp 720w, /assets/apps/kist/kist-pricing-1080.webp 1080w"
+                             sizes="(max-width: 700px) 80vw, 280px"
+                             width="1350" height="2760" loading="lazy" decoding="async"
+                             alt="The Kist paywall showing the free tier, the yearly price and a visible cancel link">
+                    </div>
+                    -->
+                </section>
 
+                <h2 class="mb-md mt-lg">Questions</h2>
+                <div class="faq-list">
+                    <h3>Is Kist free?</h3>
+                    <p>Yes, for the first five identifications, and no credit card is asked for them. After that, Pro unlocks unlimited identifications. Everything else in the app is free forever.</p>
+
+                    <h3>Do I need an account?</h3>
+                    <p>No. Kist opens straight into your collection. There is no sign up and no login.</p>
+
+                    <h3>Is this an appraisal?</h3>
+                    <p>No. It is an AI estimate, and every result says so. For insurance, probate or a sale of real value, get a certified appraiser. Kist is for knowing whether something is worth that trip.</p>
+
+                    <h3>What is Kist bad at?</h3>
+                    <p>Heavily reproduced categories. Brass, silver plate, and anything where a 1970s reproduction photographs identically to the 1890s original. In those cases it returns a wide range and a low confidence score, which is the correct answer and not a satisfying one.</p>
+
+                    <h3>Where does my collection live?</h3>
+                    <p>On your device, and in your own iCloud if you have it on. You can export the whole thing to CSV or PDF at any time, on the free tier too.</p>
+
+                    <h3>What do I need to run it?</h3>
+                    <p>An iPhone or iPad on iOS 18 or later.</p>
+                </div>
+
+                <!-- What's New. Fuente de datos estatica a proposito, ver TODO abajo. -->
                 <section class="changelog-section" data-app-slug="kist" data-lang="en">
                     <h2 class="mb-md mt-lg">What's New</h2>
-                    <div class="changelog-content"></div>
+                    <!-- TODO(changelog): esto se rellenaba desde
+                         https://panel.wilderlopezelias.com/api/public/changelogs/kist
+                         y en produccion pintaba "Could not load changelog." El .catch()
+                         del script trataba 404, CORS y fallo de red por igual, asi que
+                         no habia forma de distinguirlos. Se sustituye por HTML estatico
+                         para no enseñar un error el dia del lanzamiento. Cuando el
+                         endpoint del panel este verificado, se puede volver al fetch.  -->
+                    <div class="changelog-content">
+                        <div class="changelog-entry">
+                            <div class="changelog-header">
+                                <span class="changelog-version">1.0</span>
+                                <span class="changelog-date">Aug 28, 2026</span>
+                            </div>
+                            <ul class="changelog-bullets">
+                                <li>First public release on the App Store.</li>
+                                <li>Identify antiques and second-hand finds from a photo: what it is, its era, and its material.</li>
+                                <li>Value as a range, with a confidence meter and the AI estimate disclaimer on every result.</li>
+                                <li>A native collection you own, with iCloud sync across your devices.</li>
+                                <li>CSV and PDF export, and a Home Screen widget, both free on any tier.</li>
+                                <li>Five identifications free, with no credit card asked for them.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
+
+                <h2 class="mb-md mt-lg">Get Kist</h2>
+                <div class="app-links mb-md">
+                    <a href="https://apps.apple.com/us/app/kist-antique-identifier/id6792853183" class="app-store-link" target="_blank" rel="noopener" aria-label="Download Kist on the App Store">
+                        <img src="/assets/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="144" height="48">
+                    </a>
+                </div>
 
                 <div class="app-subpages">
                     <a href="/en/apps/kist/privacy/">Privacy Policy</a>
                     <a href="/en/apps/kist/terms/">Terms &amp; Conditions</a>
                     <a href="/en/apps/kist/support/">Support</a>
                 </div>
+
+                <p class="trademark-note">iPhone, iPad and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
             </div>
         </div>
     </main>
@@ -129,82 +357,6 @@
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => navLinks.classList.remove('open'));
         });
-
-        (function() {
-            var section = document.querySelector('.changelog-section');
-            if (!section) return;
-            var slug = section.getAttribute('data-app-slug');
-            var lang = section.getAttribute('data-lang');
-            var content = section.querySelector('.changelog-content');
-            var page = 1;
-            var pageSize = 5;
-            var total = 0;
-            var baseUrl = 'https://panel.wilderlopezelias.com/api/public/changelogs/' + slug;
-            var i18n = lang === 'es' ? {
-                loadMore: 'Ver más', showMore: 'Mostrar más', showLess: 'Mostrar menos',
-                error: 'No se pudieron cargar las novedades.'
-            } : {
-                loadMore: 'Load more', showMore: 'Show more', showLess: 'Show less',
-                error: 'Could not load changelog.'
-            };
-            var locale = lang === 'es' ? 'es-ES' : 'en-US';
-            content.innerHTML = '<div class="changelog-skeleton">' +
-                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
-                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
-                '</div>';
-            function formatDate(dateStr) { var d = new Date(dateStr); return d.toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' }); }
-            function parseBullets(text) { if (!text) return []; return text.split('\n').filter(function(l) { return l.trim().indexOf('- ') === 0; }).map(function(l) { return l.trim().substring(2); }); }
-            function parseMarkdown(text) {
-                var lines = text.split('\n'), html = '', inList = false;
-                for (var i = 0; i < lines.length; i++) {
-                    var t = lines[i].trim();
-                    if (!t) { if (inList) { html += '</ul>'; inList = false; } continue; }
-                    if (t.indexOf('## ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h4>' + inlineMd(t.substring(3)) + '</h4>'; continue; }
-                    if (t.indexOf('# ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h3>' + inlineMd(t.substring(2)) + '</h3>'; continue; }
-                    if (t.indexOf('- ') === 0) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inlineMd(t.substring(2)) + '</li>'; continue; }
-                    if (inList) { html += '</ul>'; inList = false; }
-                    html += '<p>' + inlineMd(t) + '</p>';
-                }
-                if (inList) html += '</ul>';
-                return html;
-            }
-            function inlineMd(s) { return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); }
-            function renderEntry(entry) {
-                var html = '<div class="changelog-entry"><div class="changelog-header">';
-                html += '<span class="changelog-version">' + entry.version + '</span>';
-                if (entry.release_date) html += '<span class="changelog-date">' + formatDate(entry.release_date) + '</span>';
-                html += '</div>';
-                var bullets = parseBullets(entry.bullet_points);
-                if (bullets.length) { html += '<ul class="changelog-bullets">'; bullets.forEach(function(b) { html += '<li>' + b + '</li>'; }); html += '</ul>'; }
-                if (entry.user_changelog && entry.user_changelog.trim()) {
-                    var full = entry.user_changelog.trim();
-                    var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
-                    html += '<div class="changelog-description" id="' + id + '">' + parseMarkdown(full) + '</div>';
-                    html += '<button class="changelog-show-more" onclick="var d=document.getElementById(\'' + id + '\');d.classList.toggle(\'expanded\');this.textContent=d.classList.contains(\'expanded\')?\'' + i18n.showLess + '\':\'' + i18n.showMore + '\';">' + i18n.showMore + '</button>';
-                }
-                html += '</div>';
-                return html;
-            }
-            function loadChangelogs(p) {
-                fetch(baseUrl + '?page=' + p + '&page_size=' + pageSize)
-                    .then(function(r) { return r.json(); })
-                    .then(function(data) {
-                        var entries = data.changelogs || [];
-                        total = data.total || 0;
-                        if (p === 1 && entries.length === 0) { section.style.display = 'none'; return; }
-                        if (p === 1) content.innerHTML = '';
-                        var loadMoreBtn = content.querySelector('.changelog-load-more');
-                        if (loadMoreBtn) loadMoreBtn.remove();
-                        entries.forEach(function(e) { content.insertAdjacentHTML('beforeend', renderEntry(e)); });
-                        if (p * pageSize < total) {
-                            content.insertAdjacentHTML('beforeend', '<button class="btn btn-secondary changelog-load-more">' + i18n.loadMore + '</button>');
-                            content.querySelector('.changelog-load-more').addEventListener('click', function() { page++; this.textContent = '...'; this.disabled = true; loadChangelogs(page); });
-                        }
-                    })
-                    .catch(function() { if (p === 1) content.innerHTML = '<p class="changelog-error">' + i18n.error + '</p>'; });
-            }
-            loadChangelogs(1);
-        })();
     </script>
 </body>
 </html>
