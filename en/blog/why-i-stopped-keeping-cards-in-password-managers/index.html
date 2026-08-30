@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The 22-second checkout problem nobody talks about — and the broader pattern hiding behind it. Why password managers don't fit credit cards and crypto wallets, and what I built instead.">
+    <meta name="keywords" content="iOS, Privacy, Cryptocurrency, Indie Hackers, App Store, Password Manager, 1Password, Bitwarden, ClipCard Pro, Wilder Lopez">
+    <meta name="author" content="Wilder Lopez Elias">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Why I stopped keeping credit cards and crypto wallets in my password manager">
+    <meta property="og:description" content="The 22-second checkout problem nobody talks about — and the broader pattern hiding behind it.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wilderlopezelias.com/en/blog/why-i-stopped-keeping-cards-in-password-managers/">
+    <meta property="og:image" content="https://wilderlopezelias.com/assets/og-image.png">
+    <meta property="article:author" content="Wilder Lopez Elias">
+    <meta property="article:published_time" content="2026-05-03">
+    <meta property="article:tag" content="iOS">
+    <meta property="article:tag" content="Privacy">
+    <meta property="article:tag" content="Cryptocurrency">
+    <meta property="article:tag" content="Indie Hackers">
+    <meta property="article:tag" content="App Store">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why I stopped keeping credit cards and crypto wallets in my password manager">
+    <meta name="twitter:description" content="The 22-second checkout problem nobody talks about — and the broader pattern hiding behind it.">
+    <meta name="twitter:image" content="https://wilderlopezelias.com/assets/og-image.png">
+
+    <title>Why I stopped keeping credit cards and crypto wallets in my password manager - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/en/blog/why-i-stopped-keeping-cards-in-password-managers/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/blog/why-i-stopped-keeping-cards-in-password-managers/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/blog/why-i-stopped-keeping-cards-in-password-managers/">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why I stopped keeping credit cards and crypto wallets in my password manager (and what I built instead)",
+        "description": "The 22-second checkout problem nobody talks about — and the broader pattern hiding behind it.",
+        "author": {
+            "@type": "Person",
+            "name": "Wilder Lopez Elias",
+            "url": "https://wilderlopezelias.com/en/about/"
+        },
+        "datePublished": "2026-05-03",
+        "dateModified": "2026-05-03",
+        "image": "https://wilderlopezelias.com/assets/og-image.png",
+        "publisher": {
+            "@type": "Person",
+            "name": "Wilder Lopez Elias",
+            "url": "https://wilderlopezelias.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://wilderlopezelias.com/en/blog/why-i-stopped-keeping-cards-in-password-managers/"
+        },
+        "keywords": "iOS, Privacy, Cryptocurrency, Indie Hackers, App Store"
+    }
+    </script>
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/en/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about/" class="nav-link">About</a></li>
+                <li><a href="/en/apps/" class="nav-link">Apps</a></li>
+                <li><a href="/en/blog/" class="nav-link active">Blog</a></li>
+                <li><a href="/en/contact/" class="nav-link">Contact</a></li>
+                <li class="nav-lang"><a href="/es/blog/why-i-stopped-keeping-cards-in-password-managers/" class="lang-switch" title="Cambiar a Español">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/en/" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-item"><a href="/en/blog/" class="breadcrumbs-link">Blog</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Why I stopped keeping cards in password managers</span></li>
+                </ol>
+            </nav>
+
+            <article class="blog-post">
+                <header class="page-header">
+                    <h1 class="page-title">Why I stopped keeping credit cards and crypto wallets in my password manager (and what I built instead)</h1>
+                    <p class="blog-post-subtitle">The 22-second checkout problem nobody talks about — and the broader pattern hiding behind it.</p>
+                    <div class="blog-post-meta">
+                        <time datetime="2026-05-03">May 3, 2026</time>
+                        <span class="blog-card-meta-dot">·</span>
+                        <span>8 min read</span>
+                    </div>
+                </header>
+
+                <div class="blog-post-content">
+                    <p>I pay for 1Password Family. I have for years. I have no plans to stop.</p>
+
+                    <p>This isn't a bash piece on password managers — 1Password is excellent at what it's designed for, and so is Bitwarden, and so is Apple Passwords now that Apple finally took the feature seriously. If you're using one and it works for you, keep using it.</p>
+
+                    <p>But I noticed something over the past year: I was using Notes app for a small set of sensitive data that I knew belonged in 1Password but that I wasn't actually putting there. Credit card numbers I needed to paste into checkout forms. Crypto wallet addresses friends had texted me. The corporate Amex for work that I needed three times a month.</p>
+
+                    <p>When I caught myself debating between <em>"I'll add this to 1Password later"</em> and <em>"let me just save it in Notes for now"</em> for the third time in one week, I started paying attention to why.</p>
+
+                    <p>What I figured out is the reason for this post — and the reason I ended up building a separate iOS app for the long tail of "data I paste regularly that doesn't belong in a password manager."</p>
+
+                    <hr>
+
+                    <h2>The friction nobody talks about</h2>
+
+                    <p>Here's what happens when I try to paste my credit card from 1Password into a checkout form on, say, an obscure online vendor that doesn't support Apple Pay:</p>
+
+                    <ol>
+                        <li>Switch to 1Password (cold-boot if it's been a while: ~3 seconds)</li>
+                        <li>Face ID prompt, wait for unlock (~1 second)</li>
+                        <li>Tap into the search field, type "Visa" (~2 seconds)</li>
+                        <li>Get 8 results because every site I've ever paid is tagged "Visa"</li>
+                        <li>Find the right card, tap it (~2 seconds)</li>
+                        <li>Tap the number field to copy (~1 second)</li>
+                        <li>Switch back to Safari, paste (~2 seconds)</li>
+                        <li>Switch back to 1Password to grab the expiry (~3 seconds)</li>
+                        <li>Switch back, paste expiry</li>
+                        <li>Repeat for CVV</li>
+                    </ol>
+
+                    <p>I just timed myself doing this on a real checkout form: <strong>22 seconds</strong>, eight context switches.</p>
+
+                    <p>Now here's the same flow with a card I'd saved as plain text in Notes:</p>
+
+                    <ol>
+                        <li>Open Notes, tap into "Cards" folder (~2 seconds)</li>
+                        <li>Long-press, copy whole block (~2 seconds)</li>
+                        <li>Paste into the checkout, manually delete what doesn't belong (~3 seconds)</li>
+                    </ol>
+
+                    <p><strong>7 seconds.</strong> And the number was just sitting there, unencrypted, syncing to iCloud, accessible to anyone who picked up my unlocked phone.</p>
+
+                    <p>The Notes flow is three times faster and it's also dramatically worse for security. That's the whole problem in one sentence.</p>
+
+                    <p>When I asked five friends — software engineers, all of whom use 1Password or Bitwarden — three of them admitted to some version of <em>"I also have a Notes folder for this kind of thing and I know I shouldn't."</em> The other two said they just retype the number off the physical card every time.</p>
+
+                    <p>Nobody had a clean answer.</p>
+
+                    <hr>
+
+                    <h2>The workarounds I tried (each one worse than the last)</h2>
+
+                    <p>Before I built anything, I went through the standard playbook. None of them stuck.</p>
+
+                    <p><strong>1Password's "secure note" feature.</strong> Same friction as a regular 1Password entry. Still 22 seconds. The "secure note" framing also messes with my mental model — I expect a secure note to be paragraph-style ("the WiFi password at my parents' house is XYZ") not a structured card record.</p>
+
+                    <p><strong>A text file in iCloud Drive.</strong> Marginally faster than 1Password. Same security profile as Notes (i.e. none).</p>
+
+                    <p><strong>A shared note with my partner.</strong> This was the moment I realized I was making bad decisions in a vicious cycle. Sharing card numbers in an unencrypted note with another iCloud account is genuinely worse than the original problem.</p>
+
+                    <p><strong>Just retyping from the physical card every time.</strong> Slowest of all. Also leaves the number in iOS autofill memory, which is technically a separate cache that other apps can sometimes read.</p>
+
+                    <p>Each workaround optimized for one variable (speed, or sharing, or simplicity) and gave up another (security, or memory, or sanity).</p>
+
+                    <hr>
+
+                    <h2>The bigger pattern</h2>
+
+                    <p>Around this point I stopped trying to fix my personal flow and started thinking about the category.</p>
+
+                    <p>Password managers are optimized for <strong>credentials</strong>. Login + password, maybe a 2FA seed, maybe a few related fields like recovery codes or security questions. The mental model is: <em>when I'm on this site, I need this credential.</em> The site-to-credential mapping is the whole point. It's why autofill works at all.</p>
+
+                    <p>But credit card numbers, crypto wallet addresses, frequently-pasted contact info, recurring URLs — these don't have a stable site mapping. A single credit card might get pasted into 50 different checkout forms over its lifetime. A crypto wallet address might get sent to one friend in iMessage on Monday and used in MetaMask on Tuesday and shared with my accountant on Friday.</p>
+
+                    <p>Trying to manage these in a password manager works, but the whole experience feels off:</p>
+
+                    <ul>
+                        <li>There's no "site" field that makes sense, so you fake it (<code>generic.com</code>?) or leave it blank</li>
+                        <li>Autofill doesn't trigger consistently because the trigger is the URL, and these don't have one</li>
+                        <li>Search returns dozens of false matches because every checkout you've ever used is tagged "Visa"</li>
+                        <li>The tagging system is built for accounts, not for <em>things you paste</em></li>
+                    </ul>
+
+                    <p>This isn't a flaw in 1Password or Bitwarden. It's a design choice — they're optimized for the credential pattern, and the credential pattern is the dominant use case. But it leaves a real gap for the long-tail data that doesn't fit.</p>
+
+                    <p>The framing that finally clicked for me: <strong>password managers are vaults of credentials. What I needed was a vault of paste-and-go data.</strong></p>
+
+                    <p>Different mental model. Different optimization. Different primitive.</p>
+
+                    <hr>
+
+                    <h2>What I built</h2>
+
+                    <p>I'm an iOS developer. I had this thought, sat on it for a few weeks to make sure it wasn't just frustration talking, and then started building.</p>
+
+                    <p>The result is <strong><a href="/en/apps/clipcard-pro/">ClipCard Pro</a></strong>. It's currently on the App Store. Free tier covers 5 clips and basic types; the paid tier ($2.99/mo or $19.99/yr with a 2-week trial) opens up the rest.</p>
+
+                    <p>A few specific design decisions worth surfacing here, because they came out of the password-manager-vs-paste-data pattern above:</p>
+
+                    <p><strong>Auto-detection from the clipboard, not the URL.</strong> When you copy a credit card number anywhere on iOS, ClipCard Pro detects it from the clipboard's content — it does Luhn validation, recognizes card-type prefixes, and tags it with confidence scoring. Same for crypto wallets (Bitcoin Legacy + SegWit, Ethereum, Solana, TRON), phone numbers, URLs. The "where you copied this from" doesn't matter, because in this primitive it shouldn't.</p>
+
+                    <p><strong>Tagged by contact, not by site.</strong> Because these data items don't have stable URLs, the natural grouping is <em>whose data is this?</em> — your spouse's Visa, your work corporate Amex, that crypto wallet your friend sent you. Apple has a privacy-preserving Contacts picker (you only grant access to specific contacts, not the whole address book) and that's what I use.</p>
+
+                    <p><strong>Hidden by default in the list.</strong> This is the design choice I'm proudest of. Card numbers and wallet addresses are masked by default — <code>**** **** **** 9981</code> instead of the full number. You tap to reveal, and Face ID is required if the app has been backgrounded. The principle: at any given moment, the screen shouldn't be showing data you don't actively need to see <em>right now</em>.</p>
+
+                    <p><strong>Quick Fill: number → expiry → CVV in three taps.</strong> Each piece is a separate copy action, each one buffered into the clipboard with a 60-second auto-clear. So instead of one big "copy everything" mess, you tap copy-number, paste it, tap copy-expiry, paste it, tap copy-CVV, paste it. Each step takes about a second. No context switch back to a separate app between fields.</p>
+
+                    <p><strong>No third-party server.</strong> Sync is via your own iCloud (NSPersistentCloudKitContainer). I don't have a backend. I don't have your data. The only place your clips exist is on your device and in your iCloud account.</p>
+
+                    <p><strong>No telemetry, no analytics, no third-party SDKs.</strong> I'm one person. I don't need to know what you're doing inside the app. I have no business relationship with a tracking SDK. The app phones home for exactly one thing: StoreKit 2 receipt validation, which Apple handles.</p>
+
+                    <p>For people who care about implementation details: AES-256-GCM with HKDF-SHA256 for the encrypted export feature. Keychain for the encryption keys (<code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>). NSFileProtectionComplete on the Core Data store, so the database is inaccessible when the device is locked. Privacy blur on the app switcher view. ITSAppUsesNonExemptEncryption=true declared.</p>
+
+                    <hr>
+
+                    <h2>What it isn't</h2>
+
+                    <p>If I sold you the idea above and you go install it expecting a password manager replacement, you'll be disappointed and rightly so.</p>
+
+                    <p>ClipCard Pro doesn't:</p>
+
+                    <ul>
+                        <li>Store passwords, login credentials, or 2FA seeds. Use 1Password, Bitwarden, or Apple Passwords for those.</li>
+                        <li>Support passkeys.</li>
+                        <li>Run on Windows, Android, or macOS. iOS only, iOS 17+.</li>
+                        <li>Replace browser autofill. It doesn't integrate with Safari at the autofill layer; the flow is copy-paste, not autofill.</li>
+                        <li>Share clips between users. There's no "family vault" concept. Everything is single-user.</li>
+                        <li>Try to be the only app you use. It's a complement, not a replacement.</li>
+                    </ul>
+
+                    <p>If 1Password's flow already works for you, this app probably isn't a meaningful upgrade. It's specifically for the people who, like me, were maintaining a Notes folder for this kind of data because the password manager flow didn't fit.</p>
+
+                    <hr>
+
+                    <h2>The hypothesis I'm testing</h2>
+
+                    <p>The reason this matters, even if you never install the app, is that the broader idea is what I'm actually betting on:</p>
+
+                    <p><strong>Paste-and-go sensitive data deserves its own primitive on the phone.</strong> Not a feature of a password manager. Not a folder in Notes. A separate place, with separate UX, optimized for the case where the data doesn't have a "site" attached to it.</p>
+
+                    <p>I'm one solo developer testing this hypothesis with one app. If it doesn't work, it doesn't work and I'll learn something. If it does, I think there's a real category here that the password manager incumbents haven't filled because their core abstraction is the wrong shape for it.</p>
+
+                    <p>Either way: stop saving credit cards and crypto wallets in Notes. The friction of doing it "the right way" in a password manager is real, but the security cost of Notes is bigger than most people realize. If my app isn't the answer for you, find one that is.</p>
+
+                    <hr>
+
+                    <p>ClipCard Pro on the App Store: <a href="https://apps.apple.com/app/id6757620270" target="_blank" rel="noopener">apps.apple.com/app/id6757620270</a></p>
+
+                    <p>If you have feedback, I'm in the Reddit threads where I've shared this. Or you can <a href="/en/contact/">reach me here</a>.</p>
+
+                    <p>—Wilder</p>
+                </div>
+
+                <a href="/en/blog/" class="blog-post-back">← Back to blog</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/en/about/">About</a>
+                    <a href="/en/apps/">Apps</a>
+                    <a href="/en/blog/">Blog</a>
+                    <a href="/en/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>

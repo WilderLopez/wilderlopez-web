@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Wilder Lopez - Publicaciones largas sobre desarrollo iOS, apps indie, privacidad y el oficio de lanzar software en solitario.">
+    <meta name="keywords" content="Blog Desarrollador iOS, Indie Hacker, Swift, App Store, Privacidad, Wilder Lopez">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog - Wilder Lopez">
+    <meta property="og:description" content="Publicaciones largas sobre desarrollo iOS, apps indie, privacidad y el oficio de lanzar software en solitario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilderlopezelias.com/es/blog/">
+    <meta property="og:image" content="https://wilderlopezelias.com/assets/og-image.png">
+
+    <title>Blog - Wilder Lopez</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="canonical" href="https://wilderlopezelias.com/es/blog/">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://wilderlopezelias.com/en/blog/">
+    <link rel="alternate" hreflang="es" href="https://wilderlopezelias.com/es/blog/">
+
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.wilderlopezelias.com/script.js" data-website-id="ca8d82a1-8827-4e20-837b-3fd082618627"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/es/" class="nav-logo">Wilder López Elias</a>
+            <button class="nav-toggle" aria-label="Alternar navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/es/" class="nav-link">Inicio</a></li>
+                <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
+                <li><a href="/es/apps/" class="nav-link">Apps</a></li>
+                <li><a href="/es/blog/" class="nav-link active">Blog</a></li>
+                <li><a href="/es/contact/" class="nav-link">Contacto</a></li>
+                <li class="nav-lang"><a href="/en/blog/" class="lang-switch" title="Switch to English">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="/es/" class="breadcrumbs-link">Inicio</a></li>
+                    <li class="breadcrumbs-item"><span class="breadcrumbs-current">Blog</span></li>
+                </ol>
+            </nav>
+
+            <header class="page-header">
+                <h1 class="page-title">Blog</h1>
+                <p class="page-subtitle">Publicaciones largas sobre desarrollo iOS, apps indie y el oficio de lanzar software en solitario.</p>
+            </header>
+
+            <div class="blog-list">
+                <a href="/es/blog/why-i-stopped-keeping-cards-in-password-managers/" class="blog-card">
+                    <div class="blog-card-meta">
+                        <time datetime="2026-05-03">3 de mayo de 2026</time>
+                        <span class="blog-card-meta-dot">·</span>
+                        <span>8 min de lectura</span>
+                    </div>
+                    <h2 class="blog-card-title">Por qué dejé de guardar tarjetas de crédito y wallets de crypto en mi gestor de contraseñas (y qué construí en su lugar)</h2>
+                    <p class="blog-card-excerpt">El problema de los 22 segundos en el checkout del que nadie habla — y el patrón más amplio que se esconde detrás. Pago por 1Password Family desde hace años. Pero noté que estaba usando Notas para un pequeño conjunto de datos sensibles que no encajaban del todo. Esto es lo que descubrí, y lo que construí.</p>
+                    <span class="blog-card-readmore">Leer publicación →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="/es/about/">Sobre Mí</a>
+                    <a href="/es/apps/">Apps</a>
+                    <a href="/es/blog/">Blog</a>
+                    <a href="/es/contact/">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>
