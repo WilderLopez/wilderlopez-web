@@ -1287,3 +1287,145 @@ main {
         opacity: 1;
     }
 }
+
+/* ==========================================================================
+   Paginas de producto de app (Kist 1.0)
+   Reglas de Apple, Marketing Resources and Identity Guidelines:
+   las imagenes de dispositivo se usan "as is". Nada de box-shadow, filter,
+   rotate ni scale sobre ellas. Por eso .device-shot NO reutiliza .screenshot,
+   que si lleva sombra.
+   ========================================================================== */
+
+/* Badge oficial de App Store. Alto en pantalla 48 px (minimo de Apple: 40).
+   Espacio libre alrededor: un cuarto de la altura del badge = 12 px. */
+.app-store-link {
+    display: inline-block;
+    line-height: 0;
+    margin: 12px 12px 12px 0;
+    border-radius: 8px;
+    transition: opacity var(--transition);
+}
+
+.app-store-link:hover {
+    opacity: 0.85;
+}
+
+.app-store-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.app-store-link img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+.app-cta-note {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+}
+
+/* Capturas de dispositivo. Sin sombra, sin filtros, sin transformaciones. */
+.device-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.device-shot {
+    width: 100%;
+    max-width: 280px;
+    /* Minimo de Apple para imagenes de dispositivo: 200 px de alto.
+       Relacion 1350:2760, asi que 100 px de ancho ya dan 204 px de alto. */
+    min-width: 100px;
+    height: auto;
+    display: block;
+}
+
+.device-figure figcaption {
+    margin-top: var(--spacing-sm);
+}
+
+.device-figure figcaption h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+}
+
+.device-figure figcaption p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Secciones a dos columnas: texto a un lado, dispositivo al otro. */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.split-section:has(.split-media) {
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.split-text p {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.split-media {
+    display: flex;
+    justify-content: center;
+}
+
+.app-video {
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    display: block;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* FAQ. Los <h3> tienen que coincidir literalmente con el FAQPage del ld+json. */
+.faq-list {
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-list h3 {
+    font-size: 1.05rem;
+    margin-top: var(--spacing-md);
+    margin-bottom: 0.4rem;
+}
+
+.faq-list p {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+/* Atribucion de marca de Apple. */
+.trademark-note {
+    margin-top: var(--spacing-lg);
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .split-section,
+    .split-section:has(.split-media) {
+        grid-template-columns: 1fr;
+    }
+
+    .app-store-link img {
+        height: 44px;
+    }
+}

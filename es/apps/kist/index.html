@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kist - El identificador de antigüedades honesto para iOS. Identifica antigüedades y gestiona tu colección con un rango de valor con IA honesto. Ya en beta pública en TestFlight.">
+    <meta name="description" content="Kist es un identificador de antigüedades honesto para iPhone y iPad. Fotografía una antigüedad o un hallazgo de segunda mano y descubre qué es, de qué época es y un rango de valor con su nivel de confianza. Cinco identificaciones gratis, sin tarjeta y sin anuncios.">
 
-    <meta property="og:title" content="Kist - Wilder Lopez">
-    <meta property="og:description" content="Kist - El identificador de antigüedades honesto para iOS. Identifica antigüedades y gestiona tu colección con un rango de valor con IA honesto. Ya en beta pública en TestFlight.">
+    <meta property="og:title" content="Kist - El identificador de antigüedades honesto">
+    <meta property="og:description" content="Fotografía una antigüedad o un hallazgo de segunda mano y obtén un rango de valor honesto con su nivel de confianza. Cinco identificaciones gratis, sin tarjeta y sin anuncios.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wilderlopezelias.com/es/apps/kist/">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <!-- TODO(assets): descomentar al subir kist-og.jpg (1200x630) a /assets/apps/kist/.
+         Comentada a proposito: un og:image que da 404 hace que X y Facebook cacheen el fallo.
+    <meta property="og:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kist en iPhone: sabe lo que valen tus hallazgos">
+    -->
 
-    <title>Kist - Wilder Lopez</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kist - El identificador de antigüedades honesto">
+    <meta name="twitter:description" content="Fotografía una antigüedad o un hallazgo de segunda mano y obtén un rango de valor honesto con su nivel de confianza. Cinco identificaciones gratis, sin tarjeta y sin anuncios.">
+    <!-- TODO(assets): descomentar junto con og:image.
+    <meta name="twitter:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
+    -->
+
+    <!-- Banner nativo de App Store en Safari iOS. -->
+    <meta name="apple-itunes-app" content="app-id=6792853183">
+
+    <title>Kist - El identificador de antigüedades honesto para iPhone y iPad</title>
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
     <style>
@@ -61,20 +80,21 @@
                         <h1>Kist</h1>
                         <p class="tagline">El identificador de antigüedades honesto</p>
                         <span class="platform-badge">iOS 18+</span>
-                        <span class="app-status beta">Beta pública</span>
+                        <span class="app-status live">Versión 1.0</span>
                         <div class="app-links">
-                            <a href="https://testflight.apple.com/join/MfkEJ7Ap" class="testflight-badge" target="_blank" rel="noopener" aria-label="Únete a la beta de Kist en TestFlight">
-                                <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#fff" d="M22.6 1.4 1.6 9.6c-.6.2-.6 1 0 1.2l7.5 2.9 11.4-10.3-9 11.5 2.9 7.5c.2.6 1 .6 1.2 0l8.2-21c.2-.5-.3-1-.7-.8z"/></svg>
-                                <span class="app-store-badge-text">
-                                    <span class="app-store-badge-subtitle">Únete a la beta en</span>
-                                    <span class="app-store-badge-title">TestFlight</span>
-                                </span>
+                            <!-- Badge oficial de Apple, descargado y servido "as is". Apple prohibe traducir
+                                 "App Store" a mano; la variante localizada al espanol se descarga de
+                                 https://toolbox.marketingtools.apple.com/app-store/ (TODO). Hasta entonces,
+                                 el badge oficial en ingles, que Apple permite en cualquier idioma. -->
+                            <a href="https://apps.apple.com/us/app/kist-antique-identifier/id6792853183" class="app-store-link" target="_blank" rel="noopener" aria-label="Descarga Kist en el App Store">
+                                <img src="/assets/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="144" height="48">
                             </a>
                             <!-- Badge servido desde assets: el endpoint de ProductWatch responde 404 para este productId -->
                             <a href="https://productwatch.io/products/kist-antique-identifier?utm_source=badge" class="external-badge" target="_blank" rel="noopener">
                                 <img src="/assets/badges/productwatch-featured-dark.svg" alt="Kist: Antique Identifier destacada en ProductWatch" width="250" height="52">
                             </a>
                         </div>
+                        <p class="app-cta-note">5 identificaciones gratis. Sin tarjeta. Sin anuncios.</p>
                     </div>
                 </div>
 
@@ -90,21 +110,49 @@
                     <li><strong>Sincronización iCloud</strong> - Tu colección en todos tus dispositivos, en privado</li>
                     <li><strong>Exportar CSV / PDF</strong> - Tus datos son tuyos, llévatelos a donde quieras</li>
                     <li><strong>Widget de pantalla de inicio</strong> - El valor estimado de tu colección de un vistazo</li>
-                    <li><strong>Paywall honesto</strong> - Free tier real, sin tarjeta, sin patrones oscuros</li>
+                    <li><strong>Precio honesto</strong> - Cinco identificaciones gratis, sin tarjeta, sin anuncios, sin patrones oscuros</li>
                 </ul>
 
-                <p class="mt-lg"><strong>La beta pública está abierta.</strong> Únete en <a href="https://testflight.apple.com/join/MfkEJ7Ap" class="text-link" target="_blank" rel="noopener">TestFlight</a> (iOS 18+), con identificaciones gratis y sin tarjeta. Próximamente en la App Store.</p>
+                <p class="mt-lg"><strong>Kist 1.0 ya está en la App Store.</strong> Cinco identificaciones gratis, sin tarjeta y sin anuncios. Requiere un iPhone o iPad con iOS 18 o posterior.</p>
 
                 <section class="changelog-section" data-app-slug="kist" data-lang="es">
                     <h2 class="mb-md mt-lg">Novedades</h2>
-                    <div class="changelog-content"></div>
+                    <!-- TODO(changelog): se rellenaba desde
+                         https://panel.wilderlopezelias.com/api/public/changelogs/kist
+                         y en produccion pintaba "No se pudieron cargar las novedades."
+                         Sustituido por HTML estatico para no enseñar un error. -->
+                    <div class="changelog-content">
+                        <div class="changelog-entry">
+                            <div class="changelog-header">
+                                <span class="changelog-version">1.0</span>
+                                <span class="changelog-date">28 ago 2026</span>
+                            </div>
+                            <ul class="changelog-bullets">
+                                <li>Primera versión pública en la App Store.</li>
+                                <li>Identifica antigüedades y hallazgos de segunda mano desde una foto: qué es, su época y su material.</li>
+                                <li>Valor como rango, con medidor de confianza y el aviso de estimación con IA en cada resultado.</li>
+                                <li>Una colección nativa que es tuya, con sincronización iCloud entre tus dispositivos.</li>
+                                <li>Exportación a CSV y PDF, y widget de pantalla de inicio, gratis en cualquier plan.</li>
+                                <li>Cinco identificaciones gratis, sin pedir tarjeta.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
+
+                <h2 class="mb-md mt-lg">Consigue Kist</h2>
+                <div class="app-links mb-md">
+                    <a href="https://apps.apple.com/us/app/kist-antique-identifier/id6792853183" class="app-store-link" target="_blank" rel="noopener" aria-label="Descarga Kist en el App Store">
+                        <img src="/assets/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="144" height="48">
+                    </a>
+                </div>
 
                 <div class="app-subpages">
                     <a href="/es/apps/kist/privacy/">Política de Privacidad</a>
                     <a href="/es/apps/kist/terms/">Términos y Condiciones</a>
                     <a href="/es/apps/kist/support/">Soporte</a>
                 </div>
+
+                <p class="trademark-note">iPhone, iPad y App Store son marcas comerciales de Apple Inc., registradas en EE. UU. y en otros países.</p>
             </div>
         </div>
     </main>
@@ -130,81 +178,6 @@
             link.addEventListener('click', () => navLinks.classList.remove('open'));
         });
 
-        (function() {
-            var section = document.querySelector('.changelog-section');
-            if (!section) return;
-            var slug = section.getAttribute('data-app-slug');
-            var lang = section.getAttribute('data-lang');
-            var content = section.querySelector('.changelog-content');
-            var page = 1;
-            var pageSize = 5;
-            var total = 0;
-            var baseUrl = 'https://panel.wilderlopezelias.com/api/public/changelogs/' + slug;
-            var i18n = lang === 'es' ? {
-                loadMore: 'Ver más', showMore: 'Mostrar más', showLess: 'Mostrar menos',
-                error: 'No se pudieron cargar las novedades.'
-            } : {
-                loadMore: 'Load more', showMore: 'Show more', showLess: 'Show less',
-                error: 'Could not load changelog.'
-            };
-            var locale = lang === 'es' ? 'es-ES' : 'en-US';
-            content.innerHTML = '<div class="changelog-skeleton">' +
-                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
-                '<div class="changelog-skeleton-entry"><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div><div class="changelog-skeleton-bar"></div></div>' +
-                '</div>';
-            function formatDate(dateStr) { var d = new Date(dateStr); return d.toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' }); }
-            function parseBullets(text) { if (!text) return []; return text.split('\n').filter(function(l) { return l.trim().indexOf('- ') === 0; }).map(function(l) { return l.trim().substring(2); }); }
-            function parseMarkdown(text) {
-                var lines = text.split('\n'), html = '', inList = false;
-                for (var i = 0; i < lines.length; i++) {
-                    var t = lines[i].trim();
-                    if (!t) { if (inList) { html += '</ul>'; inList = false; } continue; }
-                    if (t.indexOf('## ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h4>' + inlineMd(t.substring(3)) + '</h4>'; continue; }
-                    if (t.indexOf('# ') === 0) { if (inList) { html += '</ul>'; inList = false; } html += '<h3>' + inlineMd(t.substring(2)) + '</h3>'; continue; }
-                    if (t.indexOf('- ') === 0) { if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inlineMd(t.substring(2)) + '</li>'; continue; }
-                    if (inList) { html += '</ul>'; inList = false; }
-                    html += '<p>' + inlineMd(t) + '</p>';
-                }
-                if (inList) html += '</ul>';
-                return html;
-            }
-            function inlineMd(s) { return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); }
-            function renderEntry(entry) {
-                var html = '<div class="changelog-entry"><div class="changelog-header">';
-                html += '<span class="changelog-version">' + entry.version + '</span>';
-                if (entry.release_date) html += '<span class="changelog-date">' + formatDate(entry.release_date) + '</span>';
-                html += '</div>';
-                var bullets = parseBullets(entry.bullet_points);
-                if (bullets.length) { html += '<ul class="changelog-bullets">'; bullets.forEach(function(b) { html += '<li>' + b + '</li>'; }); html += '</ul>'; }
-                if (entry.user_changelog && entry.user_changelog.trim()) {
-                    var full = entry.user_changelog.trim();
-                    var id = 'cl-' + entry.version.replace(/[^a-z0-9]/gi, '');
-                    html += '<div class="changelog-description" id="' + id + '">' + parseMarkdown(full) + '</div>';
-                    html += '<button class="changelog-show-more" onclick="var d=document.getElementById(\'' + id + '\');d.classList.toggle(\'expanded\');this.textContent=d.classList.contains(\'expanded\')?\'' + i18n.showLess + '\':\'' + i18n.showMore + '\';">' + i18n.showMore + '</button>';
-                }
-                html += '</div>';
-                return html;
-            }
-            function loadChangelogs(p) {
-                fetch(baseUrl + '?page=' + p + '&page_size=' + pageSize)
-                    .then(function(r) { return r.json(); })
-                    .then(function(data) {
-                        var entries = data.changelogs || [];
-                        total = data.total || 0;
-                        if (p === 1 && entries.length === 0) { section.style.display = 'none'; return; }
-                        if (p === 1) content.innerHTML = '';
-                        var loadMoreBtn = content.querySelector('.changelog-load-more');
-                        if (loadMoreBtn) loadMoreBtn.remove();
-                        entries.forEach(function(e) { content.insertAdjacentHTML('beforeend', renderEntry(e)); });
-                        if (p * pageSize < total) {
-                            content.insertAdjacentHTML('beforeend', '<button class="btn btn-secondary changelog-load-more">' + i18n.loadMore + '</button>');
-                            content.querySelector('.changelog-load-more').addEventListener('click', function() { page++; this.textContent = '...'; this.disabled = true; loadChangelogs(page); });
-                        }
-                    })
-                    .catch(function() { if (p === 1) content.innerHTML = '<p class="changelog-error">' + i18n.error + '</p>'; });
-            }
-            loadChangelogs(1);
-        })();
     </script>
 </body>
 </html>
