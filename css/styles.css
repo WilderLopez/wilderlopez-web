@@ -354,6 +354,109 @@ main {
     border: 1px solid var(--color-border);
 }
 
+.page-facts {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs) var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.page-facts li + li::before {
+    content: "·";
+    margin-right: var(--spacing-sm);
+    color: var(--color-border);
+}
+
+.page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.experience-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+}
+
+.experience-item + .experience-item {
+    margin-top: var(--spacing-md);
+}
+
+.experience-item h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.about-section .experience-meta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-meta a {
+    color: var(--color-accent);
+}
+
+.experience-meta a:hover {
+    color: var(--color-accent-hover);
+}
+
+.experience-list {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-xs);
+}
+
+.experience-list li {
+    color: var(--color-text-secondary);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+.experience-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.skills-groups {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.skills-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.skills-tags span {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.875rem;
+}
+
 /* Apps Grid */
 .apps-grid {
     display: grid;
