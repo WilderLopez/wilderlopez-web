@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ClipCard Pro FAQ - Find answers about security, privacy, features, and more.">
+    <meta name="description" content="ClipCard Pro FAQ - How the secure paste keyboard works, what is free, what Pro adds, and why the keyboard cannot reach the internet.">
 
     <title>FAQ - ClipCard Pro</title>
     <link rel="stylesheet" href="/css/styles.css">
@@ -56,18 +56,22 @@
 
                 <h3>What is ClipCard Pro?</h3>
                 <p>
-                    ClipCard Pro is an iOS app designed to securely store and manage sensitive information.
-                    It works as a personal vault where you can save important data and quickly access it when needed.
+                    ClipCard Pro is a custom iOS keyboard for the data you retype every day: IBANs, tax IDs,
+                    card numbers, billing addresses, wallet addresses and notes. You save each one once in the
+                    app, and then the keyboard inserts it for you inside any other app. The vault in the app
+                    is what feeds the keyboard.
                 </p>
 
                 <h3>What types of data can I store?</h3>
-                <p>You can store five types of information:</p>
+                <p>There are 10 types, and all 10 are free:</p>
                 <ul>
-                    <li><strong>Credit/debit cards</strong> - Card numbers with OCR scanning</li>
-                    <li><strong>Crypto wallets</strong> - Cryptocurrency addresses</li>
+                    <li><strong>Credit and debit cards</strong> - Card numbers, with camera scanning</li>
+                    <li><strong>Crypto wallets, tokens and NFTs</strong> - Addresses tagged by network</li>
+                    <li><strong>Recovery phrases and BIP39 passphrases</strong> - Kept in the app, never sent to the keyboard</li>
+                    <li><strong>2FA secrets</strong> - For generating verification codes inside the app</li>
                     <li><strong>Phone numbers</strong> - Important contacts</li>
                     <li><strong>URLs</strong> - Links and web addresses</li>
-                    <li><strong>Free text</strong> - Any other information you need to save</li>
+                    <li><strong>Free text</strong> - IBANs, tax IDs, addresses, saved replies, anything else</li>
                 </ul>
 
                 <h3>What iOS version do I need?</h3>
@@ -76,38 +80,116 @@
                     and privacy technologies.
                 </p>
 
-                <h3>When will it be available?</h3>
+                <h3>Is it available?</h3>
                 <p>
-                    ClipCard Pro is currently in development. Stay tuned for updates on the release date.
+                    Yes, it is on the App Store. There is also a public TestFlight beta if you want to try
+                    the next version early.
+                </p>
+
+                <h2>The keyboard</h2>
+
+                <h3>Can the keyboard connect to the internet?</h3>
+                <p>
+                    No, and this is the part you can check yourself. The keyboard extension declares Full
+                    Access as off, and without Full Access iOS blocks a keyboard from the network entirely.
+                    Open iOS Settings, go to General, Keyboard, Keyboards, and tap ClipCard: there is no
+                    Full Access switch waiting to be turned on.
+                </p>
+
+                <h3>Does my data go through the clipboard?</h3>
+                <p>
+                    No. The keyboard inserts text straight into the field you are typing in, so nothing is
+                    left on the system clipboard for another app to read afterwards. Copying from inside the
+                    app itself does use the clipboard, and those copies clear themselves automatically.
+                </p>
+
+                <h3>Does the keyboard use Face ID?</h3>
+                <p>
+                    Not by itself. An iOS keyboard extension cannot invoke Face ID at all. What happens in
+                    ClipCard Pro is that you unlock the app with Face ID, the app mints a short-lived
+                    encrypted token, and the keyboard reads it, which keeps the keyboard open for a few
+                    minutes. You choose whether that window lasts 1, 5 or 15 minutes. The only thing the
+                    keyboard asks for on its own is a 4-digit PIN.
+                </p>
+
+                <h3>Can the keyboard change or delete my clips?</h3>
+                <p>
+                    No. It is read-only. It reads an encrypted snapshot of the clips you chose to expose and
+                    it can insert text. It has no way to create, edit or delete anything in your vault, and
+                    it cannot even extend its own unlock.
+                </p>
+
+                <h3>How do suggestions work if it cannot see my data?</h3>
+                <p>
+                    The suggestion engine runs on your iPhone and is handed only the title and the type of a
+                    clip, never its text. The structure it receives has no field for the secret at all, so
+                    ranking "IBAN, main account" above "Billing address" never involves reading either one.
+                </p>
+
+                <h3>What never reaches the keyboard?</h3>
+                <p>
+                    Recovery phrases, BIP39 passphrases and 2FA secrets. They are excluded for everyone, on
+                    both plans. The 2FA code generator lives inside the app.
                 </p>
 
                 <h2>Features</h2>
 
-                <h3>How does OCR card scanning work?</h3>
+                <h3>How does card scanning work?</h3>
                 <p>
-                    Using your iPhone's camera, ClipCard Pro can automatically recognize and capture your credit
-                    or debit card numbers. OCR processing is done entirely on your device using Apple's Vision framework.
-                    Images are never sent to external servers or stored.
+                    Using your iPhone's camera, ClipCard Pro reads the card number with Apple's Vision
+                    framework, entirely on your device. Images are never stored or sent anywhere. The expiry
+                    date and the CVV are not scanned: you type those yourself.
                 </p>
 
                 <h3>How does iCloud sync work?</h3>
                 <p>
-                    If you enable iCloud sync, your data is saved to your private iCloud account using Apple's CloudKit.
-                    This allows you to access your information from all your Apple devices (iPhone, iPad).
-                    Data is protected with Apple's end-to-end encryption.
-                    You can disable this feature anytime from the app settings.
-                </p>
-
-                <h3>How do I copy information quickly?</h3>
-                <p>
-                    With the "One-Tap Copy" feature, simply tap the item you want to copy and it will be
-                    automatically added to your clipboard, ready to paste wherever you need it.
+                    If you enable iCloud sync, your data is saved to the private database of your own iCloud
+                    account using Apple's CloudKit, which is how it reaches your other Apple devices. Apple
+                    encrypts it in transit and at rest, and if you turn on Advanced Data Protection in your
+                    iOS settings it becomes end-to-end encrypted. No ClipCard server is involved at any
+                    point. You can disable sync anytime from the app settings.
                 </p>
 
                 <h3>Can I organize my data?</h3>
                 <p>
-                    Yes. ClipCard Pro includes drag and drop functionality that allows you to rearrange
-                    your clips in any order you prefer.
+                    Yes. There is search, drag and drop reordering, and you can link clips to your iPhone
+                    contacts to group them.
+                </p>
+
+                <h2>Plans and pricing</h2>
+
+                <h3>What is free?</h3>
+                <p>
+                    Unlimited clips of all 10 types. Reading, copying, pasting, searching, plain JSON export
+                    and import, camera scanning, iCloud sync, Face ID, 3 of the 6 themes, and the keyboard
+                    itself carrying 3 clips. Neither plan has ads.
+                </p>
+
+                <h3>What does Pro add?</h3>
+                <p>
+                    Every saved clip reachable from the keyboard instead of 3, a password-protected
+                    AES-256-GCM backup file, and three extra themes. That is the whole list.
+                </p>
+
+                <h3>Is there a limit on how many clips I can save?</h3>
+                <p>
+                    No. The vault is unlimited and free. The number 3 on the free plan is how many clips
+                    reach the keyboard, not how many you can keep. The rest stay in the app, fully readable,
+                    copyable and exportable.
+                </p>
+
+                <h3>What does it cost?</h3>
+                <p>
+                    $2.99 a month with a 1 week free trial, $19.99 a year with a 2 week free trial, or $49.99
+                    once for lifetime access. The lifetime option is a single purchase and never renews. The
+                    App Store shows the price for your region.
+                </p>
+
+                <h3>Is any security feature behind the paywall?</h3>
+                <p>
+                    No, and it never will be. Face ID, the encryption and the keyboard's inability to reach
+                    the network are identical on both plans. Pro sells how much the keyboard can carry, not
+                    how well it is locked. No paywall ever blocks access to data you already saved.
                 </p>
 
                 <h2>Security & Privacy</h2>
@@ -115,10 +197,11 @@
                 <h3>Is my data secure?</h3>
                 <p>Yes. ClipCard Pro implements multiple layers of security:</p>
                 <ul>
-                    <li>All data is encrypted at rest using iOS Data Protection</li>
-                    <li>Biometric authentication (Face ID/Touch ID) or passcode is required to access the app</li>
-                    <li>iCloud data is protected with Apple's end-to-end encryption</li>
-                    <li>No data transmission to external servers</li>
+                    <li>All data is encrypted at rest using iOS Data Protection, with complete file protection, so the database is unreadable while the device is locked</li>
+                    <li>Biometric authentication (Face ID/Touch ID) or passcode is required to open the app</li>
+                    <li>The snapshot the keyboard reads is encrypted with AES-256-GCM</li>
+                    <li>CVV codes live in the iOS Keychain, on that device only, and never sync</li>
+                    <li>The app makes no network requests of its own, at all</li>
                 </ul>
 
                 <h3>Do you have access to my information?</h3>
@@ -133,7 +216,7 @@
                     or failure response from the system. We never access or store your biometric data.
                 </p>
 
-                <h3>What happens to OCR scanner images?</h3>
+                <h3>What happens to camera scanner images?</h3>
                 <p>
                     Images captured by the scanner are processed entirely on your device and discarded
                     immediately after extracting the card number. They are not stored or transmitted to any server.
@@ -141,9 +224,10 @@
 
                 <h3>What data do you collect about me?</h3>
                 <p>
-                    We do not collect your sensitive data (cards, wallets, etc.). Optionally, we may collect
-                    anonymized crash reports and basic feature usage analytics (not content) to improve the app.
-                    You can disable analytics in settings.
+                    None. There is no analytics SDK, no crash reporting service, no advertising identifier
+                    and no user account in the app. It has no networking code at all, so there is nothing to
+                    opt out of. The only external library it uses is AnyFormatKit, which formats text as you
+                    type it and sends nothing anywhere.
                 </p>
 
                 <h2>Data Management</h2>
@@ -155,6 +239,13 @@
                     <li>Delete all data from the app settings</li>
                     <li>Uninstall the app to remove all local data</li>
                 </ul>
+
+                <h3>Can I take my data with me?</h3>
+                <p>
+                    Yes, on the free plan too. Plain JSON export is never gated. Recovery phrases, BIP39
+                    passphrases and 2FA secrets are deliberately left out of an unencrypted export; to take
+                    those with you, use the password-protected backup.
+                </p>
 
                 <h3>Can I use the app without iCloud?</h3>
                 <p>

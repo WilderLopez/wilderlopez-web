@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Preguntas Frecuentes de ClipCard Pro - Encuentra respuestas sobre seguridad, privacidad, funciones y más.">
+    <meta name="description" content="Preguntas Frecuentes de ClipCard Pro - Cómo funciona el teclado seguro de pegar, qué es gratis, qué añade Pro y por qué el teclado no puede conectarse a internet.">
 
     <title>FAQ - ClipCard Pro</title>
     <link rel="stylesheet" href="/css/styles.css">
@@ -56,18 +56,22 @@
 
                 <h3>¿Qué es ClipCard Pro?</h3>
                 <p>
-                    ClipCard Pro es una aplicación iOS diseñada para almacenar y gestionar información sensible de forma segura.
-                    Funciona como una bóveda personal donde puedes guardar datos importantes y acceder a ellos rápidamente cuando los necesites.
+                    ClipCard Pro es un teclado propio de iOS para los datos que reescribes cada día: IBAN,
+                    NIF, números de tarjeta, direcciones de facturación, direcciones de billetera y notas.
+                    Guardas cada uno una sola vez en la app y después el teclado te lo inserta dentro de
+                    cualquier otra app. La bóveda de la app es lo que alimenta al teclado.
                 </p>
 
                 <h3>¿Qué tipos de datos puedo guardar?</h3>
-                <p>Puedes almacenar cinco tipos de información:</p>
+                <p>Hay 10 tipos, y los 10 son gratis:</p>
                 <ul>
-                    <li><strong>Tarjetas de crédito/débito</strong> - Números de tarjetas con escaneo OCR</li>
-                    <li><strong>Billeteras cripto</strong> - Direcciones de criptomonedas</li>
+                    <li><strong>Tarjetas de crédito y débito</strong> - Números de tarjeta, con escaneo por cámara</li>
+                    <li><strong>Billeteras cripto, tokens y NFTs</strong> - Direcciones etiquetadas por red</li>
+                    <li><strong>Frases de recuperación y frases BIP39</strong> - Se quedan en la app, nunca van al teclado</li>
+                    <li><strong>Secretos 2FA</strong> - Para generar códigos de verificación dentro de la app</li>
                     <li><strong>Números de teléfono</strong> - Contactos importantes</li>
                     <li><strong>URLs</strong> - Enlaces y direcciones web</li>
-                    <li><strong>Texto libre</strong> - Cualquier otra información que necesites guardar</li>
+                    <li><strong>Texto libre</strong> - IBAN, NIF, direcciones, respuestas guardadas y todo lo demás</li>
                 </ul>
 
                 <h3>¿Qué versión de iOS necesito?</h3>
@@ -76,39 +80,120 @@
                     y privacidad de Apple.
                 </p>
 
-                <h3>¿Cuándo estará disponible?</h3>
+                <h3>¿Está disponible?</h3>
                 <p>
-                    ClipCard Pro está actualmente en desarrollo. Mantente atento a nuestras actualizaciones para conocer
-                    la fecha de lanzamiento.
+                    Sí, está en la App Store. También hay una beta pública en TestFlight si quieres probar la
+                    próxima versión antes.
+                </p>
+
+                <h2>El teclado</h2>
+
+                <h3>¿El teclado puede conectarse a internet?</h3>
+                <p>
+                    No, y esta es la parte que puedes comprobar tú mismo. La extensión del teclado declara el
+                    Acceso Completo desactivado, y sin Acceso Completo iOS le bloquea la red por completo a un
+                    teclado. Abre los Ajustes de iOS, entra en General, Teclado, Teclados y toca ClipCard: no
+                    hay ningún interruptor de Acceso Completo esperando a que lo actives.
+                </p>
+
+                <h3>¿Mis datos pasan por el portapapeles?</h3>
+                <p>
+                    No. El teclado inserta el texto directamente en el campo donde estás escribiendo, así que
+                    no queda nada en el portapapeles del sistema para que otra app lo lea después. Copiar
+                    desde dentro de la app sí usa el portapapeles, y esas copias se borran solas.
+                </p>
+
+                <h3>¿El teclado usa Face ID?</h3>
+                <p>
+                    Por sí solo no. Una extensión de teclado de iOS no puede invocar Face ID, punto. Lo que
+                    ocurre en ClipCard Pro es que abres la app con Face ID, la app emite un token cifrado de
+                    corta duración y el teclado lo lee, y eso mantiene el teclado abierto unos minutos. Tú
+                    eliges si esa ventana dura 1, 5 o 15 minutos. Lo único que el teclado pide por su cuenta
+                    es un PIN de 4 dígitos.
+                </p>
+
+                <h3>¿El teclado puede cambiar o borrar mis clips?</h3>
+                <p>
+                    No. Es de solo lectura. Lee una copia cifrada de los clips que elegiste exponer y puede
+                    insertar texto. No tiene forma de crear, editar ni borrar nada de tu bóveda, y ni siquiera
+                    puede prolongar su propio desbloqueo.
+                </p>
+
+                <h3>¿Cómo funcionan las sugerencias si no puede ver mis datos?</h3>
+                <p>
+                    El motor de sugerencias funciona en tu iPhone y solo recibe el título y el tipo de un
+                    clip, nunca su texto. La estructura que le llega no tiene ningún campo para el secreto,
+                    así que poner "IBAN, cuenta principal" por encima de "Dirección de facturación" no implica
+                    leer ninguno de los dos.
+                </p>
+
+                <h3>¿Qué es lo que nunca llega al teclado?</h3>
+                <p>
+                    Las frases de recuperación, las frases BIP39 y los secretos 2FA. Se excluyen para todo el
+                    mundo, en los dos planes. El generador de códigos 2FA vive dentro de la app.
                 </p>
 
                 <h2>Funcionalidades</h2>
 
-                <h3>¿Cómo funciona el escaneo OCR de tarjetas?</h3>
+                <h3>¿Cómo funciona el escaneo de tarjetas?</h3>
                 <p>
-                    Usando la cámara de tu iPhone, ClipCard Pro puede reconocer y capturar automáticamente los números
-                    de tus tarjetas de crédito o débito. El procesamiento OCR se realiza completamente en tu dispositivo
-                    usando el framework Vision de Apple. Las imágenes nunca se envían a servidores externos ni se almacenan.
+                    Con la cámara de tu iPhone, ClipCard Pro lee el número de la tarjeta usando el framework
+                    Vision de Apple, completamente en tu dispositivo. Las imágenes nunca se guardan ni se
+                    envían a ningún sitio. La caducidad y el CVV no se escanean: esos los escribes tú.
                 </p>
 
                 <h3>¿Cómo funciona la sincronización con iCloud?</h3>
                 <p>
-                    Si activas la sincronización iCloud, tus datos se guardan en tu cuenta privada de iCloud usando CloudKit de Apple.
-                    Esto te permite acceder a tu información desde todos tus dispositivos Apple (iPhone, iPad).
-                    Los datos están protegidos con encriptación de extremo a extremo de Apple.
-                    Puedes desactivar esta función en cualquier momento desde la configuración de la app.
-                </p>
-
-                <h3>¿Cómo copio información rápidamente?</h3>
-                <p>
-                    Con la función "Copia con Un Toque", simplemente toca el elemento que deseas copiar y se añadirá
-                    automáticamente a tu portapapeles, listo para pegar donde lo necesites.
+                    Si activas la sincronización iCloud, tus datos se guardan en la base de datos privada de
+                    tu propia cuenta de iCloud usando CloudKit de Apple, que es como llegan a tus otros
+                    dispositivos Apple. Apple los cifra en tránsito y en reposo, y si activas la Protección de
+                    Datos Avanzada en los ajustes de iOS pasan a estar cifrados de extremo a extremo. En
+                    ningún momento hay un servidor de ClipCard de por medio. Puedes desactivar la
+                    sincronización cuando quieras desde la configuración de la app.
                 </p>
 
                 <h3>¿Puedo organizar mis datos?</h3>
                 <p>
-                    Sí. ClipCard Pro incluye la función de arrastrar y soltar (drag & drop) que te permite reorganizar
-                    tus clips en el orden que prefieras.
+                    Sí. Hay búsqueda, reordenación arrastrando y soltando, y puedes vincular clips a tus
+                    contactos del iPhone para agruparlos.
+                </p>
+
+                <h2>Planes y precios</h2>
+
+                <h3>¿Qué es gratis?</h3>
+                <p>
+                    Clips ilimitados de los 10 tipos. Leer, copiar, pegar, buscar, exportar e importar en
+                    JSON, escaneo con cámara, sincronización iCloud, Face ID, 3 de los 6 temas y el teclado
+                    con 3 clips. Ninguno de los dos planes tiene anuncios.
+                </p>
+
+                <h3>¿Qué añade Pro?</h3>
+                <p>
+                    Todos los clips guardados accesibles desde el teclado en lugar de 3, un archivo de
+                    respaldo protegido con contraseña y cifrado con AES-256-GCM, y tres temas más. Esa es la
+                    lista completa.
+                </p>
+
+                <h3>¿Hay un límite de cuántos clips puedo guardar?</h3>
+                <p>
+                    No. La bóveda es ilimitada y gratis. El número 3 del plan gratis es cuántos clips llegan
+                    al teclado, no cuántos puedes guardar. El resto se quedan en la app, y puedes leerlos,
+                    copiarlos y exportarlos sin ninguna traba.
+                </p>
+
+                <h3>¿Cuánto cuesta?</h3>
+                <p>
+                    2,99 USD al mes con 1 semana de prueba gratis, 19,99 USD al año con 2 semanas de prueba
+                    gratis, o 49,99 USD una sola vez para tenerlo de por vida. La opción de por vida es un
+                    pago único y no se renueva. La App Store te muestra el precio de tu región.
+                </p>
+
+                <h3>¿Hay alguna función de seguridad detrás del muro de pago?</h3>
+                <p>
+                    No, y nunca la habrá. Face ID, el cifrado y el hecho de que el teclado no pueda llegar a
+                    la red son idénticos en los dos planes. Pro vende cuánto puede cargar el teclado, no lo
+                    bien que está cerrado. Ningún muro de pago bloquea nunca el acceso a datos que ya
+                    guardaste.
                 </p>
 
                 <h2>Seguridad y Privacidad</h2>
@@ -116,15 +201,16 @@
                 <h3>¿Mis datos están seguros?</h3>
                 <p>Sí. ClipCard Pro implementa múltiples capas de seguridad:</p>
                 <ul>
-                    <li>Todos los datos están encriptados en reposo usando iOS Data Protection</li>
-                    <li>Se requiere autenticación biométrica (Face ID/Touch ID) o código de acceso para entrar a la app</li>
-                    <li>Los datos de iCloud están protegidos con encriptación de extremo a extremo de Apple</li>
-                    <li>No hay transmisión de datos a servidores externos</li>
+                    <li>Todos los datos están cifrados en reposo con iOS Data Protection, con protección completa de archivo, así que la base de datos es ilegible mientras el dispositivo está bloqueado</li>
+                    <li>Se requiere autenticación biométrica (Face ID/Touch ID) o código de acceso para abrir la app</li>
+                    <li>La copia que lee el teclado está cifrada con AES-256-GCM</li>
+                    <li>Los códigos CVV viven en el Llavero de iOS, solo en ese dispositivo, y nunca se sincronizan</li>
+                    <li>La app no hace ninguna petición de red por su cuenta, ninguna</li>
                 </ul>
 
                 <h3>¿Tienen acceso a mi información?</h3>
                 <p>
-                    <strong>No.</strong> No tenemos acceso a tus datos. No podemos leer, desencriptar ni recuperar tu información almacenada.
+                    <strong>No.</strong> No tenemos acceso a tus datos. No podemos leer, descifrar ni recuperar tu información almacenada.
                     Tus datos se guardan únicamente en tu dispositivo y, si lo activas, en tu cuenta privada de iCloud.
                 </p>
 
@@ -134,7 +220,7 @@
                     de éxito o fallo del sistema. Nunca accedemos ni almacenamos tus datos biométricos.
                 </p>
 
-                <h3>¿Qué pasa con las imágenes del escáner OCR?</h3>
+                <h3>¿Qué pasa con las imágenes del escáner?</h3>
                 <p>
                     Las imágenes capturadas por el escáner se procesan completamente en tu dispositivo y se descartan
                     inmediatamente después de extraer el número de tarjeta. No se almacenan ni se transmiten a ningún servidor.
@@ -142,9 +228,10 @@
 
                 <h3>¿Qué datos recopilan sobre mí?</h3>
                 <p>
-                    No recopilamos tus datos sensibles (tarjetas, billeteras, etc.). Opcionalmente, podemos recopilar
-                    reportes de errores anonimizados y análisis básicos de uso de funciones (no contenido) para mejorar la app.
-                    Puedes desactivar los análisis en la configuración.
+                    Ninguno. No hay SDK de analítica, ni servicio de reporte de errores, ni identificador
+                    publicitario, ni cuenta de usuario en la app. No tiene nada de código de red, así que no
+                    hay nada de lo que darse de baja. La única librería externa que usa es AnyFormatKit, que
+                    da formato al texto mientras escribes y no envía nada a ningún sitio.
                 </p>
 
                 <h2>Gestión de Datos</h2>
@@ -156,6 +243,14 @@
                     <li>Eliminar todos los datos desde la configuración de la app</li>
                     <li>Desinstalar la app para eliminar todos los datos locales</li>
                 </ul>
+
+                <h3>¿Puedo llevarme mis datos?</h3>
+                <p>
+                    Sí, también en el plan gratis. La exportación en JSON sin cifrar nunca está bloqueada. Las
+                    frases de recuperación, las frases BIP39 y los secretos 2FA se quedan fuera de una
+                    exportación sin cifrar a propósito; para llevártelos, usa el respaldo protegido con
+                    contraseña.
+                </p>
 
                 <h3>¿Puedo usar la app sin iCloud?</h3>
                 <p>

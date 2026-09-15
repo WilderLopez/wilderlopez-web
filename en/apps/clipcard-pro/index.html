@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ClipCard Pro - Secure iOS vault for credit cards, crypto wallets, NFTs, and more. Face ID, iCloud sync, OCR scanning, Siri integration, 6+ themes, and full accessibility.">
+    <meta name="description" content="ClipCard Pro - A secure iOS keyboard that pastes your IBAN, tax ID, card numbers and notes into any app. No network access, nothing left on the clipboard, unlimited clips for free.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="ClipCard Pro - Secure Data Vault for iOS">
-    <meta property="og:description" content="Secure iOS vault for sensitive data. Face ID, iCloud sync, OCR scanning, Siri, 6+ themes, and full accessibility.">
+    <meta property="og:title" content="ClipCard Pro - Secure Paste Keyboard for iOS">
+    <meta property="og:description" content="An iOS keyboard for the data you retype every day. It cannot reach the internet, it never goes through the clipboard, and saving clips is unlimited and free.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wilderlopezelias.com/en/apps/clipcard-pro/">
 
@@ -56,7 +56,7 @@
                     <img src="/assets/icons/clipcard-pro.webp" alt="ClipCard Pro" class="app-detail-icon-img">
                     <div class="app-detail-info">
                         <h1>ClipCard Pro</h1>
-                        <p class="tagline">Your personal vault for sensitive data</p>
+                        <p class="tagline">The secure keyboard for the data you paste every day</p>
                         <span class="platform-badge">iOS 17+</span>
                         <span class="app-status live">Available</span>
                         <div class="app-links">
@@ -69,43 +69,95 @@
                             </a>
                             <a href="https://testflight.apple.com/join/9sgTqpRm" class="btn btn-secondary" target="_blank" rel="noopener">Join Beta on TestFlight</a>
                         </div>
+                        <p class="app-cta-note">Unlimited clips, free. No account, no ads, no trackers.</p>
                     </div>
                 </div>
 
                 <div class="app-description">
                     <p>
-                        ClipCard Pro is a secure iOS vault for your most sensitive data. Store credit cards,
-                        crypto wallets, tokens, NFTs, phone numbers, URLs, and free text — all protected
-                        with biometric authentication and synced across your devices via iCloud.
+                        ClipCard Pro is a custom iOS keyboard for the data you retype every day: IBANs,
+                        tax IDs, card numbers, billing addresses, wallet addresses and notes. You save each
+                        one once in the app, then insert it with a tap from inside WhatsApp, Safari, your
+                        banking app, or anywhere else you type.
+                    </p>
+                    <p>
+                        The keyboard cannot reach the internet. Its extension declares Full Access as off,
+                        so iOS blocks the network for it entirely, and you can check that yourself in
+                        iOS Settings. It also never goes through the clipboard: text is inserted straight
+                        into the field, so nothing is left behind for another app to read.
                     </p>
                 </div>
 
-                <h2 class="mb-md">Features</h2>
+                <h2 class="mb-md">Preview</h2>
+                <div class="app-screenshots">
+                    <img src="/assets/screenshots/clipcardpro_1_en.webp" alt="The ClipCard keyboard inserting an IBAN into a message, with the note that it has no Full Access and no network" class="screenshot">
+                    <img src="/assets/screenshots/clipcardpro_2_en.webp" alt="The vault list showing an IBAN, a tax ID, a billing address, a card, a saved reply and a link" class="screenshot">
+                    <img src="/assets/screenshots/clipcardpro_6_en.webp" alt="The vault with no clip counter, showing that saving, reading, copying and exporting are never locked" class="screenshot">
+                </div>
+
+                <h2 class="mb-md mt-lg">Features</h2>
                 <ul class="feature-list">
-                    <li><strong>7 Data Types</strong> - Credit cards, crypto wallets, tokens, NFTs, phone numbers, URLs, and free text</li>
-                    <li><strong>OCR Card Scanning</strong> - Capture credit card numbers instantly using your camera with the Vision framework</li>
-                    <li><strong>iCloud Sync</strong> - Automatic synchronization across all your Apple devices</li>
-                    <li><strong>Face ID / Touch ID</strong> - Biometric protection on every app launch</li>
-                    <li><strong>Smart Clipboard Detection</strong> - Automatically detects and identifies data types from your clipboard</li>
-                    <li><strong>Siri Integration</strong> - Copy, search, create, and manage clips with voice commands</li>
-                    <li><strong>Privacy Masking</strong> - Granular control to hide sensitive data by type (last 4 digits, partial display)</li>
-                    <li><strong>6+ Visual Themes</strong> - Customize the look with multiple themes, all with light and dark mode</li>
-                    <li><strong>Contact Association</strong> - Organize clips by linking them to your iPhone contacts</li>
-                    <li><strong>Import / Export</strong> - Backup and restore your data in JSON format</li>
-                    <li><strong>Gestures</strong> - One-tap copy, double-tap quick copy, swipe-to-delete, drag-and-drop reorder</li>
-                    <li><strong>Full Accessibility</strong> - VoiceOver, Dynamic Type, Reduce Motion, and privacy-aware screen reading</li>
+                    <li><strong>A keyboard, not just a vault</strong> - Paste your saved data inside any app, without switching away from it</li>
+                    <li><strong>No network access at all</strong> - The extension never requests Full Access, so iOS blocks the network. Verify it in iOS Settings yourself</li>
+                    <li><strong>Never through the clipboard</strong> - Text goes straight into the field. Nothing is left for another app to read</li>
+                    <li><strong>The keyboard is read-only</strong> - It can insert what you picked, and it cannot change or delete anything in your vault</li>
+                    <li><strong>Locked until you open it</strong> - A 4-digit PIN opens the keyboard. Unlock the app with Face ID and the keyboard stays open with it for a few minutes, free plan included</li>
+                    <li><strong>Suggestions that cannot read your secrets</strong> - The suggestion engine runs on your iPhone and is never handed the text of a clip</li>
+                    <li><strong>You choose what it can see</strong> - Every clip has its own switch. Recovery phrases, BIP39 passphrases and 2FA secrets never reach the keyboard at all</li>
+                    <li><strong>10 data types, all free</strong> - Cards, crypto wallets, crypto tokens, NFTs, recovery phrases, BIP39 passphrases, 2FA secrets, phone numbers, URLs and free text</li>
+                    <li><strong>Crypto addresses by network</strong> - Bitcoin and Lightning, Ethereum and the main EVM chains, Solana, Tron, Cardano, Dogecoin, Litecoin and TON</li>
+                    <li><strong>Camera scanning</strong> - The Vision framework reads the card number on device. Expiry date and CVV are typed by you</li>
+                    <li><strong>2FA codes inside the app</strong> - Generate verification codes in ClipCard Pro. The secrets stay in the app and never travel to the keyboard</li>
+                    <li><strong>iCloud sync</strong> - Your own private iCloud, across your Apple devices. There is no ClipCard server and no account to create</li>
+                    <li><strong>Face ID / Touch ID</strong> - Biometric protection on every app launch, on both plans</li>
+                    <li><strong>Import and export</strong> - Plain JSON export is always free. Pro adds a password-protected AES-256-GCM backup</li>
+                    <li><strong>Privacy masking</strong> - Granular control to hide sensitive data by type, such as showing only the last four digits</li>
+                    <li><strong>Voice shortcuts</strong> - Copy, search, create and count clips from the Shortcuts app, in English and Spanish</li>
+                    <li><strong>6 visual themes</strong> - Three free and three with Pro, each with light and dark mode, and the color travels to the keyboard</li>
+                    <li><strong>Full accessibility</strong> - VoiceOver in the app and in the keyboard, Dynamic Type, Reduce Motion and privacy-aware screen reading</li>
                 </ul>
 
-                <p class="mt-lg"><strong>Available on the App Store.</strong> Download the app and share your feedback.</p>
+                <h2 class="mb-md mt-lg">Pricing, in plain words</h2>
+                <p>
+                    <strong>Free:</strong> unlimited clips of all 10 types. Reading, copying, pasting,
+                    searching, plain JSON export and import, camera scanning, iCloud sync, Face ID,
+                    3 of the 6 themes, and the keyboard carrying 3 clips. No ads on either plan.
+                </p>
+                <p>
+                    <strong>Pro:</strong> every saved clip reachable from the keyboard instead of 3,
+                    a password-protected AES-256-GCM backup file, and three extra themes.
+                    $2.99 a month with a 1 week free trial, $19.99 a year with a 2 week free trial,
+                    or $49.99 once for lifetime access, which is a single purchase and never renews.
+                    The App Store shows the price for your region.
+                </p>
+                <p>
+                    <strong>Security is never a paid tier.</strong> Face ID, the encryption and the
+                    keyboard's inability to reach the network are the same whether you pay or not.
+                    No paywall ever blocks data you already saved.
+                </p>
 
-                <h2 class="mb-md mt-lg">Preview</h2>
-                <div class="app-screenshots">
-                    <img src="/assets/screenshots/clipcardpro_1_en.webp" alt="ClipCard Pro - Main screen" class="screenshot">
-                    <img src="/assets/screenshots/clipcardpro_2_en.webp" alt="ClipCard Pro - Add card" class="screenshot">
-                    <img src="/assets/screenshots/clipcardpro_3_en.webp" alt="ClipCard Pro - Clip detail" class="screenshot">
-                    <img src="/assets/screenshots/clipcardpro_4_en.webp" alt="ClipCard Pro - OCR scanning" class="screenshot">
-                    <img src="/assets/screenshots/clipcardpro_5_en.webp" alt="ClipCard Pro - Settings" class="screenshot">
-                    <img src="/assets/screenshots/clipcardpro_6_en.webp" alt="ClipCard Pro - iCloud sync" class="screenshot">
+                <h2 class="mb-md mt-lg">Questions</h2>
+                <div class="faq-list">
+                    <h3>Does the keyboard use Face ID?</h3>
+                    <p>Not by itself, because an iOS keyboard extension cannot invoke Face ID. What happens is that you unlock the app with Face ID and the keyboard opens with it for a few minutes. The only thing the keyboard asks for on its own is a 4-digit PIN.</p>
+
+                    <h3>How do I know it cannot send my data anywhere?</h3>
+                    <p>Open iOS Settings, go to General, Keyboard, Keyboards, and tap ClipCard. Full Access is off and there is nothing to turn on. Without Full Access, iOS blocks the extension from the network. You do not have to take our word for it.</p>
+
+                    <h3>Is there a limit on how much I can save?</h3>
+                    <p>No. The vault is unlimited and free, of all 10 types. The number 3 on the free plan is how many of those clips reach the keyboard, not how many you can keep.</p>
+
+                    <h3>Do I need an account?</h3>
+                    <p>No. There is no sign up, no email and no ClipCard server. Sync goes through your own private iCloud, and you can turn it off.</p>
+
+                    <h3>Can the keyboard change my data?</h3>
+                    <p>No. It reads an encrypted copy of the clips you selected and inserts text. It cannot create, edit or delete anything.</p>
+
+                    <h3>What never reaches the keyboard?</h3>
+                    <p>Recovery phrases, BIP39 passphrases and 2FA secrets, for everyone, paid or not. They also stay out of a plain, unencrypted export.</p>
+
+                    <h3>What do I need to run it?</h3>
+                    <p>An iPhone on iOS 17 or later.</p>
                 </div>
 
                 <section class="changelog-section" data-app-slug="clipcard-pro" data-lang="en">

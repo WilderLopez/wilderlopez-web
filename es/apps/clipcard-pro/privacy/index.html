@@ -52,79 +52,126 @@
             </header>
 
             <div class="legal-content">
-                <p class="last-updated">Última actualización: Febrero 2026</p>
+                <p class="last-updated">Última actualización: Septiembre 2026</p>
 
                 <h2>Introducción</h2>
                 <p>
                     Esta Política de Privacidad describe cómo ClipCard Pro ("nosotros", "nuestro" o "nos") maneja
-                    la información cuando usas nuestra aplicación de bóveda segura de datos para iOS.
+                    la información cuando usas nuestra app de iOS y su teclado seguro de pegar.
+                </p>
+                <p>
+                    La versión corta: la app no recopila nada. No tiene analítica, ni servicio de reporte de
+                    errores, ni identificador publicitario, ni cuenta de usuario, ni servidor nuestro. No
+                    contiene nada de código de red, así que no hay datos que enviar ni nada de lo que darse
+                    de baja.
                 </p>
 
                 <h2>Almacenamiento de Datos</h2>
                 <p>
                     ClipCard Pro está diseñado con la privacidad como principio fundamental. Tus datos sensibles
-                    (tarjetas de crédito, billeteras cripto, números de teléfono, URLs y texto) se almacenan:
+                    (números de tarjeta, billeteras cripto, frases de recuperación, secretos 2FA, números de
+                    teléfono, URLs y texto) se almacenan:
                 </p>
                 <ul>
-                    <li><strong>Localmente en tu dispositivo</strong> usando iOS Core Data con encriptación</li>
-                    <li><strong>En tu cuenta privada de iCloud</strong> (si habilitas la sincronización iCloud) - encriptado de extremo a extremo por Apple</li>
+                    <li><strong>Localmente en tu dispositivo</strong> con iOS Core Data y protección completa de archivo, lo que hace que la base de datos sea ilegible mientras el dispositivo está bloqueado</li>
+                    <li><strong>En la base de datos privada de tu propia cuenta de iCloud</strong>, si activas la sincronización iCloud</li>
+                    <li><strong>Los códigos CVV, solo en el Llavero de iOS</strong>, limitados a ese único dispositivo y sin sincronizar nunca</li>
                 </ul>
                 <p>
-                    No tenemos acceso a tus datos. No podemos leer, desencriptar ni recuperar tu información almacenada.
+                    No tenemos acceso a tus datos. No podemos leer, descifrar ni recuperar tu información almacenada.
                 </p>
 
                 <h2>Información que Recopilamos</h2>
                 <h3>Lo que NO Recopilamos</h3>
                 <ul>
-                    <li>Tus tarjetas almacenadas, billeteras o cualquier dato sensible</li>
+                    <li>Tus tarjetas, billeteras, frases ni ningún otro dato guardado</li>
                     <li>Números de tarjetas de crédito o información financiera</li>
-                    <li>Direcciones de billeteras de criptomonedas</li>
-                    <li>Datos biométricos (Face ID/Touch ID es procesado completamente por iOS)</li>
-                    <li>Imágenes capturadas por el escáner OCR</li>
+                    <li>Direcciones de billeteras de criptomonedas ni frases de recuperación</li>
+                    <li>Datos biométricos (Face ID/Touch ID lo procesa completamente iOS)</li>
+                    <li>Imágenes capturadas por el escáner de la cámara</li>
+                    <li>Analíticas de uso, telemetría de funciones ni reportes de errores</li>
+                    <li>Identificadores de dispositivo, identificadores publicitarios ni ningún perfil sobre ti</li>
                 </ul>
 
-                <h3>Lo que PODEMOS Recopilar (Opcional)</h3>
-                <ul>
-                    <li>Reportes de errores anonimizados para mejorar la estabilidad de la app</li>
-                    <li>Análisis básicos de uso (uso de funciones, no contenido)</li>
-                </ul>
-                <p>Puedes desactivar los análisis en Configuración.</p>
-
-                <h2>Cámara y OCR</h2>
+                <h3>Lo que Recopilamos</h3>
                 <p>
-                    ClipCard Pro usa tu cámara para escanear tarjetas de crédito mediante OCR (reconocimiento óptico de caracteres).
-                    Las imágenes se procesan completamente en el dispositivo usando el framework Vision de Apple. No se transmiten,
-                    almacenan ni envían imágenes a servidores externos.
+                    Nada. No hay código de analítica ni de telemetría en la app. Si nos escribes para pedir
+                    ayuda, evidentemente conservamos el correo que decidiste enviarnos, y nada más allá de eso.
+                </p>
+
+                <h3>Código de Terceros</h3>
+                <p>
+                    La app depende de una única librería externa, AnyFormatKit, que da formato al texto
+                    mientras escribes. Funciona enteramente en tu dispositivo y no transmite nada. No hay SDK
+                    publicitario, ni de analítica, ni de reporte de errores en la app.
+                </p>
+
+                <h2>El Teclado ClipCard</h2>
+                <p>
+                    El teclado es una extensión de iOS, y está construido a propósito con menos acceso que la
+                    propia app:
+                </p>
+                <ul>
+                    <li><strong>No tiene acceso a la red.</strong> La extensión declara el Acceso Completo desactivado, así que iOS le bloquea la red por completo. Puedes comprobarlo en los Ajustes de iOS, en General, Teclado, Teclados, ClipCard: no hay ningún interruptor de Acceso Completo que activar</li>
+                    <li><strong>No usa el portapapeles.</strong> El texto entra directamente en el campo donde escribes, así que no queda nada para que otra app lo lea</li>
+                    <li><strong>Es de solo lectura.</strong> Puede insertar texto y nada más. No puede crear, editar ni borrar nada de tu bóveda</li>
+                    <li><strong>Solo ve lo que tú permites.</strong> Lee una copia cifrada con AES-256-GCM que contiene únicamente los clips que activaste, guardada en un App Group compartido dentro de tu dispositivo</li>
+                    <li><strong>Las sugerencias nunca ven tus secretos.</strong> El motor de sugerencias funciona en el dispositivo y solo recibe el título y el tipo de un clip. La estructura que se le entrega no tiene ningún campo para el texto</li>
+                    <li><strong>Hay datos que nunca llegan a él.</strong> Las frases de recuperación, las frases BIP39 y los secretos 2FA se excluyen del teclado para todos los usuarios, en los dos planes</li>
+                </ul>
+
+                <h2>Cámara y Escaneo</h2>
+                <p>
+                    ClipCard Pro usa tu cámara para leer números de tarjeta mediante reconocimiento óptico de
+                    caracteres. Las imágenes se procesan completamente en el dispositivo con el framework
+                    Vision de Apple, se descartan inmediatamente después y nunca se transmiten, almacenan ni
+                    envían a ningún servidor. La caducidad y el CVV no se escanean: los escribes tú.
                 </p>
 
                 <h2>Sincronización iCloud</h2>
                 <p>
-                    Si habilitas la sincronización iCloud, tus datos se almacenan en tu cuenta privada de iCloud usando
-                    CloudKit de Apple. Estos datos están encriptados de extremo a extremo por Apple y no podemos acceder a ellos.
-                    Puedes desactivar la sincronización iCloud en cualquier momento en la configuración de la app.
+                    Si activas la sincronización iCloud, tus datos se guardan en la base de datos privada de
+                    tu propia cuenta de iCloud a través de CloudKit de Apple. Apple los cifra en tránsito y en
+                    reposo, y si activas la Protección de Datos Avanzada en los ajustes de iOS pasan a estar
+                    cifrados de extremo a extremo, de modo que ni siquiera Apple tiene las claves. Mientras
+                    están en iCloud, tus datos se rigen por los términos y la política de privacidad de Apple.
+                    Nosotros no los vemos nunca, y en ningún momento hay un servidor nuestro de por medio.
+                    Puedes desactivar la sincronización iCloud cuando quieras en la configuración de la app.
                 </p>
 
                 <h2>Autenticación Biométrica</h2>
                 <p>
                     Face ID y Touch ID son manejados completamente por iOS. ClipCard Pro solo recibe una
-                    respuesta de éxito/fallo. Nunca accedemos ni almacenamos tus datos biométricos.
+                    respuesta de éxito o fallo. Nunca accedemos ni almacenamos tus datos biométricos. Ten en
+                    cuenta que la extensión del teclado nunca invoca Face ID, porque iOS no permite a un
+                    teclado hacerlo: en su lugar, la app se autentica y le pasa al teclado un token cifrado de
+                    corta duración.
                 </p>
 
                 <h2>Seguridad de Datos</h2>
                 <ul>
-                    <li>Todos los datos encriptados en reposo usando iOS Data Protection</li>
-                    <li>Se requiere biometría o código de acceso para entrar a la app</li>
-                    <li>Sin almacenamiento ni transmisión de datos en servidores</li>
-                    <li>Datos de iCloud protegidos por encriptación de extremo a extremo de Apple</li>
+                    <li>Todos los datos cifrados en reposo con iOS Data Protection, con protección completa de archivo</li>
+                    <li>Se requiere biometría o código de acceso para abrir la app</li>
+                    <li>La copia que lee el teclado y el respaldo opcional protegido con contraseña usan ambos AES-256-GCM</li>
+                    <li>Sin almacenamiento en servidores ni transmisión de tus datos por nuestra parte</li>
+                    <li>Las copias al portapapeles hechas dentro de la app se marcan como locales y caducan solas</li>
                 </ul>
+
+                <h2>Compras</h2>
+                <p>
+                    Las suscripciones y la compra de por vida las procesa Apple a través de la App Store.
+                    Nunca vemos tus datos de pago. La app comprueba tu suscripción mediante StoreKit dentro de
+                    tu dispositivo.
+                </p>
 
                 <h2>Tus Derechos</h2>
                 <p>Tienes control total sobre tus datos:</p>
                 <ul>
                     <li>Eliminar elementos individuales o todos los datos en cualquier momento</li>
+                    <li>Exportarlo todo a JSON sin cifrar, gratis, en cualquier plan</li>
                     <li>Desactivar la sincronización iCloud para mantener los datos solo en el dispositivo</li>
+                    <li>Apagar el teclado, o elegir clip por clip lo que puede ver</li>
                     <li>Desinstalar la app para eliminar todos los datos locales</li>
-                    <li>Optar por no participar en análisis en Configuración</li>
                 </ul>
 
                 <h2>Privacidad de Menores</h2>
