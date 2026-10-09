@@ -25,6 +25,9 @@
     <meta name="twitter:description" content="Importa tu colección desde un fichero, añade piezas a mano, pide una segunda opinión a la IA junto a tus propios datos y exporta exactamente lo que elijas.">
     <meta name="twitter:image" content="https://wilderlopezelias.com/assets/apps/kist/kist-og.jpg">
 
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Acento de marca Kist (verde salvia + laton), override scoped a estas paginas -->
     <style>
@@ -43,12 +46,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/es/" class="nav-logo">Wilder López Elias</a>
-            <button class="nav-toggle" aria-label="Alternar navegación">
+            <button class="nav-toggle" aria-label="Alternar navegación" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="/es/" class="nav-link">Inicio</a></li>
                 <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
                 <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
@@ -172,7 +175,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <p class="footer-text">&copy; 2026 Wilder Lopez. Todos los derechos reservados.</p>
                 <div class="footer-links">
                     <a href="/es/about/">Sobre Mí</a>
                     <a href="/es/apps/">Apps</a>
@@ -185,9 +188,9 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navToggle.addEventListener('click', () => navToggle.setAttribute('aria-expanded', navLinks.classList.toggle('open')));
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('open'));
+            link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
         });
     </script>
 </body>
