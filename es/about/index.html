@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="description" content="Sobre Wilder Lopez Elias - Senior iOS Engineer y iOS Tech Lead con 7 años publicando apps de consumo en iOS, iPadOS, watchOS y macOS: SwiftUI, media en tiempo real, Swift Concurrency, CI/CD y decisiones de producto basadas en datos.">
 
     <!-- Open Graph -->
@@ -26,12 +31,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/es/" class="nav-logo">Wilder López Elias</a>
-            <button class="nav-toggle" aria-label="Alternar navegación">
+            <button class="nav-toggle" aria-label="Abrir navegación" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="/es/" class="nav-link">Inicio</a></li>
                 <li><a href="/es/about/" class="nav-link active">Sobre Mí</a></li>
                 <li><a href="/es/apps/" class="nav-link">Apps</a></li>
@@ -83,7 +88,7 @@
                     </p>
                     <p>
                         Mi camino comenzó con la Ingeniería en Ciencias Informáticas en la Universidad de las Ciencias
-                        Informáticas en La Habana, Cuba (2014–2019). Desde entonces he trabajado en productos muy
+                        Informáticas en La Habana, Cuba (2014 a 2019). Desde entonces he trabajado en productos muy
                         distintos, desde una app de mensajería a escala nacional y una app para repartidores de
                         delivery hasta videovigilancia en vivo, telefonía VoIP y una red social de consumo, siempre
                         con el nivel de calidad que exige el ecosistema Apple.
@@ -94,8 +99,8 @@
                     <h2>Experiencia</h2>
 
                     <article class="experience-item">
-                        <h3>Tech Lead e iOS Engineer — Conexxxion (Initium USA Corp)</h3>
-                        <p class="experience-meta">Ago 2024 – Presente · Remoto, Estados Unidos · App social de consumo · <a href="https://apps.apple.com/app/id6740635258" target="_blank" rel="noopener">App Store</a></p>
+                        <h3>Tech Lead e iOS Engineer, Conexxxion (Initium USA Corp)</h3>
+                        <p class="experience-meta">Ago 2024 a la actualidad · Remoto, Estados Unidos · App social de consumo · <a href="https://apps.apple.com/app/id6740635258" target="_blank" rel="noopener">App Store</a></p>
                         <ul class="experience-list">
                             <li>Responsable de la aplicación iOS de extremo a extremo: arquitectura, entrega de features en SwiftUI, releases en App Store y respuesta a incidentes en producción, con un ritmo de publicación semanal.</li>
                             <li>Lidero decisiones clave de ingeniería y producto para un equipo multidisciplinar de 7 personas entre iOS, Android, backend y QA: dirección técnica, planificación de entregas y code review.</li>
@@ -108,8 +113,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>Senior iOS Engineer — Anteklab</h3>
-                        <p class="experience-meta">Nov 2022 – Presente · Remoto, Italia · Videovigilancia en vivo y telefonía VoIP</p>
+                        <h3>Senior iOS Engineer, Anteklab</h3>
+                        <p class="experience-meta">Nov 2022 a la actualidad · Remoto, Italia · Videovigilancia en vivo y telefonía VoIP</p>
                         <ul class="experience-list">
                             <li>Responsable de la entrega iOS de dos productos de media en tiempo real: AylookPro (videovigilancia en vivo) y AbilisPhone (telefonía VoIP).</li>
                             <li>Integré y mantengo reproducción multimedia basada en GStreamer con calidad adaptativa al ancho de banda para streams en vivo y grabados sobre redes limitadas.</li>
@@ -121,8 +126,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>iOS Developer — Grupo Salinas / UPAX</h3>
-                        <p class="experience-meta">Nov 2021 – Nov 2022 · Ciudad de México, México · App para repartidores de delivery</p>
+                        <h3>iOS Developer, Grupo Salinas / UPAX</h3>
+                        <p class="experience-meta">Nov 2021 a Nov 2022 · Ciudad de México, México · App para repartidores de delivery</p>
                         <ul class="experience-list">
                             <li>Entregué los flujos de onboarding, carga de documentos y activación de zonas para una app en producción usada a diario por repartidores en todo México.</li>
                             <li>Integré Firebase y Firestore para actualizaciones en tiempo real, MapKit y Google Maps para rutas en vivo, y AWS Cognito junto con verificación facial de terceros para la identidad de los repartidores.</li>
@@ -130,8 +135,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>iOS Developer — Universidad de las Ciencias Informáticas (ToDus)</h3>
-                        <p class="experience-meta">Sep 2019 – Nov 2021 · La Habana, Cuba · App de mensajería a escala nacional</p>
+                        <h3>iOS Developer, Universidad de las Ciencias Informáticas (ToDus)</h3>
+                        <p class="experience-meta">Sep 2019 a Nov 2021 · La Habana, Cuba · App de mensajería a escala nacional</p>
                         <ul class="experience-list">
                             <li>Construí un framework XMPP en Swift desde cero y gestioné el manejo concurrente de eventos con GCD para mantener la mensajería fluida para una base de usuarios de todo el país.</li>
                             <li>Migré pantallas de UIKit a SwiftUI y habilité targets Catalyst para iPadOS y macOS; di soporte a los releases a través de App Store Connect y TestFlight.</li>
@@ -143,7 +148,7 @@
                     <h2>Proyectos Propios</h2>
 
                     <article class="experience-item">
-                        <h3>Kist — Identificador de antigüedades con IA</h3>
+                        <h3>Kist: Identificador de antigüedades con IA</h3>
                         <p class="experience-meta"><a href="/es/apps/kist/">Página del producto</a> · <a href="https://apps.apple.com/app/id6792853183" target="_blank" rel="noopener">App Store</a></p>
                         <ul class="experience-list">
                             <li>Construida en solitario: identifica antigüedades y hallazgos de segunda mano a partir de una foto, devolviendo época, material y un rango de valor honesto con un medidor de confianza en lugar de una cifra exacta falsa.</li>
@@ -226,7 +231,7 @@
                 <section class="about-section">
                     <h2>Educación e Idiomas</h2>
                     <p>
-                        <strong>Ingeniero en Ciencias Informáticas</strong> — Universidad de las Ciencias Informáticas (UCI), La Habana, Cuba (2014–2019)
+                        <strong>Ingeniero en Ciencias Informáticas</strong>, Universidad de las Ciencias Informáticas (UCI), La Habana, Cuba (2014 a 2019)
                     </p>
                     <p style="margin-top: var(--spacing-sm);">
                         <strong>Idiomas:</strong> Español (Nativo) · Inglés (Profesional Completo)
@@ -239,7 +244,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. Todos los derechos reservados.</p>
+                <p class="footer-text">&copy; 2026 Wilder Lopez Elias. Todos los derechos reservados.</p>
                 <div class="footer-links">
                     <a href="/es/about/">Sobre Mí</a>
                     <a href="/es/apps/">Apps</a>
@@ -252,9 +257,9 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navToggle.addEventListener('click', () => navToggle.setAttribute('aria-expanded', navLinks.classList.toggle('open')));
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('open'));
+            link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
         });
     </script>
 </body>

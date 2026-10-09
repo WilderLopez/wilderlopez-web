@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="description" content="About Wilder Lopez Elias - Senior iOS Engineer and iOS Tech Lead with 7 years shipping consumer apps across iOS, iPadOS, watchOS and macOS: SwiftUI, realtime media, Swift Concurrency, CI/CD and data-driven product decisions.">
 
     <!-- Open Graph -->
@@ -26,12 +31,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/en/" class="nav-logo">Wilder López Elias</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="/en/" class="nav-link">Home</a></li>
                 <li><a href="/en/about/" class="nav-link active">About</a></li>
                 <li><a href="/en/apps/" class="nav-link">Apps</a></li>
@@ -83,7 +88,7 @@
                     </p>
                     <p>
                         My journey started with Computer Engineering at the University of Informatics Sciences
-                        in Havana, Cuba (2014–2019). Since then I've worked across very different products,
+                        in Havana, Cuba (2014 to 2019). Since then I've worked across very different products,
                         from a national-scale messaging app and a food delivery driver app to live video
                         surveillance, VoIP telephony and a consumer social network, always holding the bar
                         for quality that the Apple ecosystem demands.
@@ -94,8 +99,8 @@
                     <h2>Experience</h2>
 
                     <article class="experience-item">
-                        <h3>Tech Lead and iOS Engineer — Conexxxion (Initium USA Corp)</h3>
-                        <p class="experience-meta">Aug 2024 – Present · Remote, United States · Consumer social app · <a href="https://apps.apple.com/app/id6740635258" target="_blank" rel="noopener">App Store</a></p>
+                        <h3>Tech Lead and iOS Engineer, Conexxxion (Initium USA Corp)</h3>
+                        <p class="experience-meta">Aug 2024 to present · Remote, United States · Consumer social app · <a href="https://apps.apple.com/app/id6740635258" target="_blank" rel="noopener">App Store</a></p>
                         <ul class="experience-list">
                             <li>Own the iOS application end to end: architecture, feature delivery in SwiftUI, App Store releases and production incident response, on a fast weekly shipping cadence.</li>
                             <li>Lead key engineering and product decisions for a cross-functional team of 7 across iOS, Android, backend and QA: technical direction, delivery planning and code review.</li>
@@ -108,8 +113,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>Senior iOS Engineer — Anteklab</h3>
-                        <p class="experience-meta">Nov 2022 – Present · Remote, Italy · Live video surveillance and VoIP telephony</p>
+                        <h3>Senior iOS Engineer, Anteklab</h3>
+                        <p class="experience-meta">Nov 2022 to present · Remote, Italy · Live video surveillance and VoIP telephony</p>
                         <ul class="experience-list">
                             <li>Own iOS delivery for two realtime media products: AylookPro (live video surveillance) and AbilisPhone (VoIP telephony).</li>
                             <li>Integrated and maintained GStreamer-based multimedia playback with bandwidth-adaptive quality for live and recorded streams over constrained networks.</li>
@@ -121,8 +126,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>iOS Developer — Grupo Salinas / UPAX</h3>
-                        <p class="experience-meta">Nov 2021 – Nov 2022 · Mexico City, Mexico · Food delivery driver app</p>
+                        <h3>iOS Developer, Grupo Salinas / UPAX</h3>
+                        <p class="experience-meta">Nov 2021 to Nov 2022 · Mexico City, Mexico · Food delivery driver app</p>
                         <ul class="experience-list">
                             <li>Delivered onboarding, document upload and zone activation flows for a production app used daily by delivery drivers across Mexico.</li>
                             <li>Integrated Firebase and Firestore for realtime updates, MapKit and Google Maps for live routing, and AWS Cognito plus third-party facial verification for driver identity checks.</li>
@@ -130,8 +135,8 @@
                     </article>
 
                     <article class="experience-item">
-                        <h3>iOS Developer — University of Informatics Sciences (ToDus)</h3>
-                        <p class="experience-meta">Sep 2019 – Nov 2021 · Havana, Cuba · National-scale messaging app</p>
+                        <h3>iOS Developer, University of Informatics Sciences (ToDus)</h3>
+                        <p class="experience-meta">Sep 2019 to Nov 2021 · Havana, Cuba · National-scale messaging app</p>
                         <ul class="experience-list">
                             <li>Built an XMPP framework in Swift from scratch and managed concurrent event handling with GCD to keep messaging responsive for a nationwide user base.</li>
                             <li>Migrated UIKit screens to SwiftUI and enabled Catalyst targets for iPadOS and macOS; supported releases through App Store Connect and TestFlight.</li>
@@ -143,7 +148,7 @@
                     <h2>Independent Work</h2>
 
                     <article class="experience-item">
-                        <h3>Kist — AI antique identifier</h3>
+                        <h3>Kist: AI antique identifier</h3>
                         <p class="experience-meta"><a href="/en/apps/kist/">Product page</a> · <a href="https://apps.apple.com/app/id6792853183" target="_blank" rel="noopener">App Store</a></p>
                         <ul class="experience-list">
                             <li>Built solo: identifies antiques and second-hand finds from a photo, returning era, material and an honest value range with a confidence meter instead of a fake precise number.</li>
@@ -226,7 +231,7 @@
                 <section class="about-section">
                     <h2>Education & Languages</h2>
                     <p>
-                        <strong>Computer Engineer</strong> — University of Informatics Sciences (UCI), Havana, Cuba (2014–2019)
+                        <strong>Computer Engineer</strong>, University of Informatics Sciences (UCI), Havana, Cuba (2014 to 2019)
                     </p>
                     <p style="margin-top: var(--spacing-sm);">
                         <strong>Languages:</strong> Spanish (Native) · English (Full Professional)
@@ -239,7 +244,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Wilder Lopez Elias. All rights reserved.</p>
+                <p class="footer-text">&copy; 2026 Wilder Lopez Elias. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="/en/about/">About</a>
                     <a href="/en/apps/">Apps</a>
@@ -252,9 +257,9 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navToggle.addEventListener('click', () => navToggle.setAttribute('aria-expanded', navLinks.classList.toggle('open')));
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('open'));
+            link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
         });
     </script>
 </body>

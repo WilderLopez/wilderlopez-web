@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="description" content="Kist es un identificador de antigüedades honesto para iPhone y iPad. Fotografía una antigüedad o un hallazgo de segunda mano y descubre qué es, de qué época es y un rango de valor con su nivel de confianza. Cinco identificaciones gratis, sin tarjeta y sin anuncios.">
 
     <meta property="og:title" content="Kist - El identificador de antigüedades honesto">
@@ -102,12 +107,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/es/" class="nav-logo">Wilder López Elias</a>
-            <button class="nav-toggle" aria-label="Alternar navegación">
+            <button class="nav-toggle" aria-label="Abrir navegación" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="/es/" class="nav-link">Inicio</a></li>
                 <li><a href="/es/about/" class="nav-link">Sobre Mí</a></li>
                 <li><a href="/es/apps/" class="nav-link active">Apps</a></li>
@@ -330,7 +335,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Wilder Lopez. Todos los derechos reservados.</p>
+                <p class="footer-text">&copy; 2026 Wilder Lopez. Todos los derechos reservados.</p>
                 <div class="footer-links">
                     <a href="/es/about/">Sobre Mí</a>
                     <a href="/es/apps/">Apps</a>
@@ -343,9 +348,9 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navToggle.addEventListener('click', () => navToggle.setAttribute('aria-expanded', navLinks.classList.toggle('open')));
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('open'));
+            link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
         });
 
     </script>

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="description" content="HappySells - Real-time currency and crypto converter with interactive widgets, Dynamic Island, Apple Watch complications, and macOS MenuBar. Designed for informal and P2P markets.">
 
     <!-- Open Graph -->
@@ -26,12 +31,12 @@
     <header class="header">
         <nav class="nav">
             <a href="/en/" class="nav-logo">Wilder López Elias</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="/en/" class="nav-link">Home</a></li>
                 <li><a href="/en/about/" class="nav-link">About</a></li>
                 <li><a href="/en/apps/" class="nav-link active">Apps</a></li>
@@ -63,7 +68,7 @@
                         <span class="platform-badge">watchOS</span>
                         <span class="app-status development">Coming Soon</span>
                         <div class="app-links">
-                            <span class="btn btn-primary" style="opacity: 0.5; pointer-events: none;">App Store — Coming Soon</span>
+                            <span class="btn btn-primary" style="opacity: 0.5; pointer-events: none;">App Store: Coming Soon</span>
                         </div>
                     </div>
                 </div>
@@ -90,7 +95,7 @@
                     <li><strong>Smart Refresh Limits</strong> - Intelligent rate refresh to conserve bandwidth</li>
                 </ul>
 
-                <h2 class="mb-md mt-lg">Pro — $1.99/mo or $14.99/yr</h2>
+                <h2 class="mb-md mt-lg">Pro: $1.99/mo or $14.99/yr</h2>
                 <ul class="feature-list">
                     <li><strong>Unlimited Widgets</strong> - Home Screen, Lock Screen, and StandBy widgets</li>
                     <li><strong>Live Activities</strong> - Dynamic Island with real-time rate tracking</li>
@@ -109,7 +114,7 @@
                     <li><strong>Global Fiat</strong> - ExchangeRate API</li>
                 </ul>
 
-                <p class="mt-lg"><strong>Built with 100% native Apple frameworks.</strong> SwiftUI, SwiftData, WidgetKit, ActivityKit, Swift Charts, StoreKit 2 — zero external dependencies.</p>
+                <p class="mt-lg"><strong>Built with 100% native Apple frameworks.</strong> SwiftUI, SwiftData, WidgetKit, ActivityKit, Swift Charts, StoreKit 2, zero external dependencies.</p>
 
                 <h2 class="mb-md mt-lg">Preview</h2>
                 <div class="app-screenshots">
@@ -138,7 +143,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Wilder Lopez. All rights reserved.</p>
+                <p class="footer-text">&copy; 2026 Wilder Lopez. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="/en/about/">About</a>
                     <a href="/en/apps/">Apps</a>
@@ -151,9 +156,9 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navToggle.addEventListener('click', () => navToggle.setAttribute('aria-expanded', navLinks.classList.toggle('open')));
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('open'));
+            link.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
         });
 
         (function() {
