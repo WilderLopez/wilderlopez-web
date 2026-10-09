@@ -563,6 +563,7 @@ main {
 
 /* App Detail Page */
 .app-detail {
+    padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-2xl);
 }
 
@@ -1722,6 +1723,12 @@ main {
     .split-section,
     .split-section:has(.split-media) {
         grid-template-columns: 1fr;
+    }
+
+    /* En móvil el icono encima del texto: al lado dejaba una columna de 180 px. */
+    .app-card-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
     }
 
     .app-store-link img {
